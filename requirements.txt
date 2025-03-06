@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+streamlit
+librosa
+numpy
+pydub
+pandas
+python-multipart
+requests 
