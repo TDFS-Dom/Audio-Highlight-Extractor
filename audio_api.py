@@ -521,10 +521,10 @@ async def process_audio_file(audio_file_path, output_dir, file_name, num_segment
         # Lấy tên file gốc không có phần mở rộng
         base_filename = os.path.splitext(os.path.basename(file_name))[0]
         
-        # Xử lý tên file để tránh lỗi Unicode
+        # Xử lý tên file để bỏ dấu nhưng giữ nguyên ký tự
         if any(ord(c) > 127 for c in base_filename):
             base_filename_ascii = unicodedata.normalize('NFKD', base_filename)
-            base_filename_ascii = re.sub(r'[^\x00-\x7F]+', '_', base_filename_ascii)
+            base_filename_ascii = ''.join([c for c in base_filename_ascii if not unicodedata.combining(c)])
             write_log(file_name, f"Đã chuyển đổi tên file có dấu '{base_filename}' thành '{base_filename_ascii}'")
             base_filename = base_filename_ascii
         
