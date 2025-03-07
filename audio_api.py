@@ -12,6 +12,10 @@ from datetime import datetime
 from pydub import AudioSegment
 import asyncio
 import logging
+import unicodedata
+import re
+from scipy import signal
+from scipy.signal import find_peaks
 
 app = FastAPI()
 
@@ -174,7 +178,7 @@ async def process_audio_file(audio_file_path, output_dir, file_name, num_segment
         
         # 1. Năng lượng (RMS)
         rms = librosa.feature.rms(y=y)[0]
-        write_log(file_name, f"Đã tính toán RMS: min={np.min(rms):.4f}, max={np.max(rms):.4f}, mean={np.mean(rms):.4f}")
+        write_log(file_name, f"Đã tính toán RMS: min={float(np.min(rms)):.4f}, max={float(np.max(rms)):.4f}, mean={float(np.mean(rms)):.4f}")
         
         # 2. Spectral Centroid - đặc trưng cho "độ sáng" của âm thanh
         spectral_centroid = librosa.feature.spectral_centroid(y=y, sr=sr)[0]
@@ -191,9 +195,44 @@ async def process_audio_file(audio_file_path, output_dir, file_name, num_segment
         onset_env = (onset_env - np.mean(onset_env)) / np.std(onset_env)
         write_log(file_name, "Đã tính toán Onset Strength")
         
-        # Kết hợp các đặc trưng (có thể điều chỉnh trọng số)
-        combined_feature = rms * 0.4 + spectral_centroid * 0.2 + contrast * 0.2 + onset_env * 0.2
-        write_log(file_name, "Đã kết hợp các đặc trưng")
+        # 5. Thêm Tempo và Beat Strength - phát hiện nhịp điệu mạnh
+        tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)
+        # Chuyển đổi tempo từ numpy.ndarray sang Python float
+        tempo = float(tempo)
+        beat_strength = librosa.onset.onset_strength(y=y, sr=sr, hop_length=512)
+        beat_strength = (beat_strength - np.mean(beat_strength)) / np.std(beat_strength)
+        write_log(file_name, f"Đã tính toán Tempo ({tempo:.2f} BPM) và Beat Strength")
+        
+        # 6. Thêm Harmonic-Percussive Source Separation để phát hiện phần giai điệu và nhịp
+        y_harmonic, y_percussive = librosa.effects.hpss(y)
+        harmonic_strength = librosa.feature.rms(y=y_harmonic)[0]
+        percussive_strength = librosa.feature.rms(y=y_percussive)[0]
+        harmonic_strength = (harmonic_strength - np.mean(harmonic_strength)) / np.std(harmonic_strength)
+        percussive_strength = (percussive_strength - np.mean(percussive_strength)) / np.std(percussive_strength)
+        write_log(file_name, "Đã tính toán Harmonic-Percussive Separation")
+        
+        # 7. Thêm Mel-frequency cepstral coefficients (MFCCs) để phát hiện đặc trưng âm sắc
+        mfcc = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
+        mfcc_var = np.var(mfcc, axis=1)  # Tính phương sai của mỗi hệ số MFCC
+        mfcc_var = (mfcc_var - np.min(mfcc_var)) / (np.max(mfcc_var) - np.min(mfcc_var))  # Chuẩn hóa
+        mfcc_dynamic = np.mean(mfcc_var)  # Đo lường sự thay đổi trong âm sắc
+        write_log(file_name, "Đã tính toán MFCC và độ biến thiên âm sắc")
+        
+        # Kết hợp các đặc trưng với trọng số tối ưu hơn
+        # Tăng trọng số cho RMS, Beat Strength và Percussive Strength để ưu tiên đoạn sôi động
+        combined_feature = (
+            rms * 0.3 +                  # Năng lượng âm thanh
+            spectral_centroid * 0.1 +    # Độ sáng của âm thanh
+            contrast * 0.1 +             # Sự khác biệt giữa peak và valley
+            onset_env * 0.15 +           # Sự thay đổi đột ngột
+            beat_strength * 0.2 +        # Độ mạnh của nhịp
+            percussive_strength * 0.15   # Độ mạnh của phần nhịp điệu
+        )
+        
+        # Áp dụng bộ lọc trung bình động để làm mịn đặc trưng
+        window_size = 100  # Kích thước cửa sổ trung bình động
+        combined_feature = np.convolve(combined_feature, np.ones(window_size)/window_size, mode='same')
+        write_log(file_name, "Đã kết hợp và làm mịn các đặc trưng")
         
         # Áp dụng cửa sổ trượt để tìm đoạn có tổng đặc trưng cao nhất
         frame_length = int(segment_duration * sr)
@@ -212,40 +251,61 @@ async def process_audio_file(audio_file_path, output_dir, file_name, num_segment
         # Tìm đoạn có tổng đặc trưng cao nhất
         write_log(file_name, "Đang tìm đoạn có đặc trưng cao nhất...")
         scores = []
-        for i in range(0, len(y) - frame_length, hop_length):
-            segment = combined_feature[i:i+frame_length]
-            scores.append((i, np.mean(segment)))
-        write_log(file_name, f"Đã tính toán điểm số cho {len(scores)} đoạn")
         
-        # Phân tích cấu trúc bài hát để phát hiện các đoạn lặp lại
-        write_log(file_name, "Đang phân tích cấu trúc bài hát...")
+        # Thêm phân tích cấu trúc bài hát để phát hiện chorus/điệp khúc
+        write_log(file_name, "Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...")
+        
         # Sử dụng chroma features để phát hiện cấu trúc hòa âm
-        chroma = librosa.feature.chroma_stft(y=y, sr=sr)
+        chroma = librosa.feature.chroma_cqt(y=y_harmonic, sr=sr)
         
-        # Tính ma trận tự tương quan để tìm các đoạn tương tự nhau
+        # Tính ma trận tự tương quan để tìm các đoạn lặp lại (điệp khúc)
         write_log(file_name, "Đang tính ma trận tự tương quan...")
         similarity_matrix = librosa.segment.recurrence_matrix(
             chroma, width=int(segment_duration * sr / hop_length), mode='affinity'
         )
         
-        # Phân đoạn bài hát dựa trên sự thay đổi trong đặc trưng
-        write_log(file_name, "Đang phân đoạn bài hát...")
-        boundaries = librosa.segment.agglomerative(similarity_matrix, int(len(y) / (sr * 10)))
-        boundary_times = librosa.frames_to_time(boundaries, sr=sr)
+        # Tính tổng tương quan cho mỗi frame để phát hiện đoạn lặp lại nhiều nhất
+        chorus_scores = np.sum(similarity_matrix, axis=1)
+        chorus_scores = (chorus_scores - np.min(chorus_scores)) / (np.max(chorus_scores) - np.min(chorus_scores))
         
-        # Chuyển đổi boundaries thành các đoạn
-        segments = []
-        for i in range(len(boundary_times) - 1):
-            start_time_seg = boundary_times[i]
-            end_time_seg = boundary_times[i+1]
-            segments.append((start_time_seg, end_time_seg))
-        write_log(file_name, f"Đã phân đoạn bài hát thành {len(segments)} đoạn")
+        # Chuyển đổi chorus_scores thành cùng độ dài với y
+        if len(chorus_scores) < len(y) // hop_length:
+            chorus_scores = np.repeat(chorus_scores, hop_length)
+        else:
+            chorus_scores = np.interp(
+                np.linspace(0, 1, len(y)), 
+                np.linspace(0, 1, len(chorus_scores) * hop_length), 
+                np.repeat(chorus_scores, hop_length)
+            )
+        
+        write_log(file_name, "Đã tính điểm số cho các đoạn điệp khúc tiềm năng")
+        
+        # Kết hợp điểm số đặc trưng với điểm số điệp khúc
+        combined_score = combined_feature * 0.7 + chorus_scores[:len(combined_feature)] * 0.3
+        
+        # Tính điểm số cho mỗi đoạn
+        for i in range(0, len(y) - frame_length, hop_length):
+            segment = combined_score[i:i+frame_length]
+            
+            # Tính điểm trung bình của đoạn
+            mean_score = np.mean(segment)
+            
+            # Tính thêm độ biến thiên để ưu tiên đoạn có sự thay đổi
+            variation_score = np.std(segment) * 0.3
+            
+            # Tính điểm cuối cùng
+            final_score = mean_score + variation_score
+            
+            scores.append((i, final_score))
+        
+        write_log(file_name, f"Đã tính toán điểm số cho {len(scores)} đoạn")
         
         # Sắp xếp theo điểm số giảm dần
         scores.sort(key=lambda x: x[1], reverse=True)
         write_log(file_name, "Đã sắp xếp các đoạn theo điểm số")
         
-        # Lấy n đoạn có điểm cao nhất và đảm bảo chúng không trùng lặp về mặt cấu trúc
+        # Lấy 2 đoạn có điểm cao nhất và đảm bảo chúng không trùng lặp về mặt cấu trúc
+        num_segments = 2  # Luôn lấy 2 đoạn hay nhất
         top_segments = []
         # Tăng khoảng cách tối thiểu lên 200% độ dài đoạn để đảm bảo các đoạn cách xa nhau
         min_distance_samples = int(segment_duration * sr * 2.0)
@@ -258,91 +318,217 @@ async def process_audio_file(audio_file_path, output_dir, file_name, num_segment
         # Tạo danh sách các đoạn đã chọn để kiểm tra tính tương tự
         selected_features = []
         
-        write_log(file_name, "Đang chọn các đoạn highlight...")
-        for start_sample, score in scores:
-            start_time_hl = start_sample / sr
-            
-            # Kiểm tra khoảng cách với các đoạn đã chọn
-            is_far_enough = True
-            for selected_start, _ in top_segments:
-                if abs(start_sample - selected_start) < min_distance_samples:
-                    is_far_enough = False
-                    break
-            
-            if not is_far_enough:
-                continue
-            
-            # Kiểm tra xem đoạn này có thuộc cùng một phân đoạn cấu trúc với đoạn nào đã chọn không
-            current_segment_idx = -1
-            for i, (seg_start, seg_end) in enumerate(segments):
-                if seg_start <= start_time_hl < seg_end:
-                    current_segment_idx = i
-                    break
-            
-            # Kiểm tra tính tương tự về mặt âm nhạc với các đoạn đã chọn
-            is_unique = True
-            if len(selected_features) > 0:
-                # Trích xuất đặc trưng của đoạn hiện tại
-                end_sample = min(start_sample + frame_length, len(y))
-                current_segment = y[start_sample:end_sample]
-                current_chroma = librosa.feature.chroma_stft(y=current_segment, sr=sr)
-                
-                # So sánh với các đoạn đã chọn
-                for prev_chroma in selected_features:
-                    # Tính độ tương tự cosine
-                    similarity = np.mean(
-                        [np.dot(c1, c2) / (np.linalg.norm(c1) * np.linalg.norm(c2)) 
-                         for c1, c2 in zip(current_chroma, prev_chroma) if np.linalg.norm(c1) > 0 and np.linalg.norm(c2) > 0]
-                    )
-                    
-                    # Nếu độ tương tự quá cao (> 0.85), coi là trùng lặp
-                    if similarity > 0.85:
-                        is_unique = False
-                        break
-            
-            if is_far_enough and is_unique:
-                # Lưu đặc trưng của đoạn này để so sánh sau
-                end_sample = min(start_sample + frame_length, len(y))
-                current_segment = y[start_sample:end_sample]
-                current_chroma = librosa.feature.chroma_stft(y=current_segment, sr=sr)
-                selected_features.append(current_chroma)
-                
-                top_segments.append((start_sample, score))
-                write_log(file_name, f"Đã chọn đoạn highlight tại {start_time_hl:.2f}s với điểm số {score:.4f}")
-                if len(top_segments) >= num_segments:
-                    break
+        write_log(file_name, "Đang chọn các đoạn highlight bắt đầu từ cao trào...")
         
-        # Nếu không tìm đủ số đoạn không trùng lặp, giảm ngưỡng tương tự
-        if len(top_segments) < num_segments and len(scores) > num_segments:
-            write_log(file_name, f"Không tìm đủ {num_segments} đoạn không trùng lặp, đang giảm ngưỡng tương tự...")
+        # Phát hiện cao trào trong bài hát
+        # Sử dụng kết hợp năng lượng, onset và percussive để tìm cao trào
+        climax_feature = (
+            rms * 0.4 +                  # Năng lượng âm thanh
+            onset_env * 0.3 +            # Sự thay đổi đột ngột
+            percussive_strength * 0.3    # Độ mạnh của phần nhịp điệu
+        )
+        
+        # Đảm bảo climax_feature có cùng độ dài với y
+        if len(climax_feature) < len(y):
+            climax_feature = np.interp(
+                np.linspace(0, 1, len(y)), 
+                np.linspace(0, 1, len(climax_feature)), 
+                climax_feature
+            )
+        
+        # Áp dụng bộ lọc để làm nổi bật các đỉnh
+        # Đảm bảo window_length là số lẻ và nhỏ hơn độ dài của climax_feature
+        window_length = min(51, len(climax_feature) - 2)
+        if window_length % 2 == 0:
+            window_length -= 1
+        
+        if window_length >= 3:  # Savgol filter yêu cầu window_length >= 3
+            try:
+                climax_feature = signal.savgol_filter(climax_feature, window_length, 3)
+            except Exception as e:
+                write_log(file_name, f"Lỗi khi áp dụng savgol_filter: {str(e)}, sử dụng dữ liệu gốc")
+        
+        # Tìm các đỉnh cục bộ (local maxima) - đây là các cao trào tiềm năng
+        try:
+            # Đảm bảo distance là số nguyên dương
+            min_peak_distance = max(1, int(10 * sr / hop_length))  # Giảm xuống 10 giây
+            peaks, _ = find_peaks(climax_feature, 
+                                 height=np.mean(climax_feature) + 0.3*np.std(climax_feature),  # Giảm ngưỡng
+                                 distance=min_peak_distance)
+            
+            write_log(file_name, f"Đã phát hiện {len(peaks)} cao trào tiềm năng")
+        except Exception as e:
+            write_log(file_name, f"Lỗi khi tìm peaks: {str(e)}, sử dụng phương pháp thay thế")
+            # Phương pháp thay thế: lấy các điểm có giá trị cao nhất
+            num_peaks = 10  # Số lượng đỉnh cần tìm
+            peak_indices = np.argsort(climax_feature)[-num_peaks:]
+            peaks = sorted(peak_indices)
+            write_log(file_name, f"Đã phát hiện {len(peaks)} cao trào tiềm năng bằng phương pháp thay thế")
+        
+        # Chuyển đổi vị trí peak từ index của climax_feature sang vị trí mẫu trong y
+        peak_samples = []
+        for peak in peaks:
+            # Đảm bảo peak nằm trong phạm vi của climax_feature
+            if peak < len(climax_feature):
+                # Chuyển đổi từ index trong climax_feature sang vị trí mẫu
+                sample_pos = int(peak * hop_length)
+                # Đảm bảo có đủ dữ liệu cho một đoạn hoàn chỉnh
+                if sample_pos + frame_length <= len(y):
+                    # Lấy giá trị tại vị trí peak
+                    # Đảm bảo chuyển đổi thành Python float nguyên thủy, không phải numpy.float
+                    peak_value = float(climax_feature[peak])
+                    peak_samples.append((sample_pos, peak_value))
+        
+        # Sắp xếp các cao trào theo độ mạnh giảm dần
+        peak_samples.sort(key=lambda x: x[1], reverse=True)
+        write_log(file_name, f"Đã sắp xếp {len(peak_samples)} cao trào theo độ mạnh")
+        
+        # Tạo hai danh sách riêng biệt cho main và chorus
+        main_segments = []  # Cho cao trào
+        chorus_segments = []  # Cho điệp khúc
+
+        # 1. Tìm đoạn main (cao trào) trước - luôn lấy 1 đoạn main
+        write_log(file_name, "Đang tìm đoạn cao trào (main)...")
+
+        # Sử dụng climax_feature đã tính toán để tìm cao trào
+        if len(peak_samples) > 0:
+            # Lấy cao trào mạnh nhất
+            main_start_sample, main_score = peak_samples[0]
+            
+            try:
+                # Tối ưu vị trí bắt đầu để bắt đầu từ cao trào
+                window_start = max(0, main_start_sample - int(5 * sr))
+                window_end = min(len(y), main_start_sample + int(2 * sr))
+                
+                if window_start < window_end:
+                    window_start_idx = window_start // hop_length
+                    window_end_idx = min(window_end // hop_length, len(climax_feature))
+                    
+                    if window_start_idx < window_end_idx and window_end_idx <= len(climax_feature):
+                        window_feature = climax_feature[window_start_idx:window_end_idx]
+                        
+                        if len(window_feature) > 0:
+                            local_peak_idx = np.argmax(window_feature)
+                            local_peak = window_start + local_peak_idx * hop_length
+                            adjusted_start = max(0, local_peak - int(0.5 * sr))
+                            main_segments.append((adjusted_start, float(main_score), "main"))
+                            write_log(file_name, f"Đã chọn đoạn main (cao trào) tại {adjusted_start/sr:.2f}s với điểm số {float(main_score):.4f}")
+                        else:
+                            main_segments.append((main_start_sample, float(main_score), "main"))
+                            write_log(file_name, f"Window feature rỗng, đã chọn đoạn main tại vị trí ban đầu {main_start_sample/sr:.2f}s")
+                    else:
+                        main_segments.append((main_start_sample, float(main_score), "main"))
+                        write_log(file_name, f"Chỉ số window không hợp lệ, đã chọn đoạn main tại vị trí ban đầu {main_start_sample/sr:.2f}s")
+                else:
+                    main_segments.append((main_start_sample, float(main_score), "main"))
+                    write_log(file_name, f"Window không hợp lệ, đã chọn đoạn main tại vị trí ban đầu {main_start_sample/sr:.2f}s")
+            except Exception as e:
+                write_log(file_name, f"Lỗi khi tối ưu vị trí bắt đầu cho main: {str(e)}, sử dụng vị trí ban đầu")
+                main_segments.append((main_start_sample, float(main_score), "main"))
+                write_log(file_name, f"Đã chọn đoạn main tại vị trí ban đầu {main_start_sample/sr:.2f}s với điểm số {float(main_score):.4f}")
+        else:
+            # Nếu không tìm thấy cao trào, sử dụng đoạn có điểm combined_score cao nhất
+            write_log(file_name, "Không tìm thấy cao trào, sử dụng đoạn có điểm tổng hợp cao nhất cho main...")
+            if len(scores) > 0:
+                main_start_sample, main_score = scores[0]  # Lấy đoạn có điểm cao nhất
+                main_segments.append((main_start_sample, float(main_score), "main"))
+                write_log(file_name, f"Đã chọn đoạn main tại {main_start_sample/sr:.2f}s với điểm số {float(main_score):.4f}")
+
+        # 2. Tìm nhiều đoạn chorus (điệp khúc) - số lượng = num_segments - 1
+        num_chorus = max(1, num_segments - 1)  # Đảm bảo ít nhất 1 chorus
+        write_log(file_name, f"Đang tìm {num_chorus} đoạn điệp khúc (chorus)...")
+
+        # Tính điểm số riêng cho chorus, tăng trọng số cho chorus_scores
+        chorus_specific_scores = []
+        for i in range(0, len(y) - frame_length, hop_length):
+            # Lấy đoạn chorus_scores tương ứng
+            if i < len(chorus_scores):
+                segment = chorus_scores[i:i+frame_length] if i+frame_length <= len(chorus_scores) else chorus_scores[i:]
+                if len(segment) > 0:
+                    # Tính điểm trung bình của đoạn
+                    mean_score = np.mean(segment)
+                    # Tính thêm độ biến thiên để ưu tiên đoạn có sự thay đổi
+                    variation_score = np.std(segment) * 0.2
+                    # Tính điểm cuối cùng
+                    final_score = mean_score + variation_score
+                    chorus_specific_scores.append((i, float(final_score)))
+
+        # Sắp xếp theo điểm số giảm dần
+        if chorus_specific_scores:
+            chorus_specific_scores.sort(key=lambda x: x[1], reverse=True)
+            
+            # Tìm nhiều đoạn chorus có điểm cao và đủ xa nhau
+            chorus_candidates = []
+            for chorus_start_sample, chorus_score in chorus_specific_scores:
+                # Kiểm tra khoảng cách với đoạn main
+                is_far_from_main = True
+                for main_start, _, _ in main_segments:
+                    if abs(chorus_start_sample - main_start) < min_distance_samples:
+                        is_far_from_main = False
+                        break
+                
+                # Kiểm tra khoảng cách với các đoạn chorus đã chọn
+                is_far_from_other_chorus = True
+                for other_chorus_start, _, _ in chorus_segments:
+                    if abs(chorus_start_sample - other_chorus_start) < min_distance_samples:
+                        is_far_from_other_chorus = False
+                        break
+                
+                if is_far_from_main and is_far_from_other_chorus:
+                    chorus_segments.append((chorus_start_sample, float(chorus_score), "chorus"))
+                    write_log(file_name, f"Đã chọn đoạn chorus (điệp khúc) tại {chorus_start_sample/sr:.2f}s với điểm số {float(chorus_score):.4f}")
+                    
+                    # Nếu đã đủ số lượng chorus cần lấy thì dừng
+                    if len(chorus_segments) >= num_chorus:
+                        break
+
+        # Nếu không tìm đủ đoạn chorus, sử dụng đoạn có điểm tổng hợp cao
+        if len(chorus_segments) < num_chorus:
+            write_log(file_name, f"Chỉ tìm được {len(chorus_segments)} đoạn chorus, cần thêm {num_chorus - len(chorus_segments)} đoạn...")
             for start_sample, score in scores:
-                if len(top_segments) >= num_segments:
-                    break
-                    
-                # Kiểm tra xem đoạn này đã được chọn chưa
-                already_selected = any(start_sample == selected_start for selected_start, _ in top_segments)
-                
-                if already_selected:
-                    continue
-                    
-                # Kiểm tra khoảng cách với các đoạn đã chọn
-                is_far_enough = True
-                for selected_start, _ in top_segments:
-                    if abs(start_sample - selected_start) < min_distance_samples // 2:  # Giảm khoảng cách
-                        is_far_enough = False
+                # Kiểm tra khoảng cách với đoạn main
+                is_far_from_main = True
+                for main_start, _, _ in main_segments:
+                    if abs(start_sample - main_start) < min_distance_samples:
+                        is_far_from_main = False
                         break
                 
-                if is_far_enough:
-                    top_segments.append((start_sample, score))
-                    write_log(file_name, f"Đã chọn đoạn highlight bổ sung tại {start_sample/sr:.2f}s với điểm số {score:.4f}")
-        
+                # Kiểm tra khoảng cách với các đoạn chorus đã chọn
+                is_far_from_other_chorus = True
+                for other_chorus_start, _, _ in chorus_segments:
+                    if abs(start_sample - other_chorus_start) < min_distance_samples:
+                        is_far_from_other_chorus = False
+                        break
+                
+                if is_far_from_main and is_far_from_other_chorus:
+                    chorus_segments.append((start_sample, float(score), "chorus"))
+                    write_log(file_name, f"Đã chọn đoạn chorus thay thế tại {start_sample/sr:.2f}s với điểm số {float(score):.4f}")
+                    
+                    # Nếu đã đủ số lượng chorus cần lấy thì dừng
+                    if len(chorus_segments) >= num_chorus:
+                        break
+
+        # Kết hợp main và chorus segments
+        top_segments = main_segments + chorus_segments
+
         # Sắp xếp lại theo thứ tự thời gian
         top_segments.sort(key=lambda x: x[0])
-        write_log(file_name, f"Đã chọn tổng cộng {len(top_segments)} đoạn highlight")
+        write_log(file_name, f"Đã chọn tổng cộng {len(top_segments)} đoạn highlight (main: {len(main_segments)}, chorus: {len(chorus_segments)})")
         
         highlights = []
         write_log(file_name, "Đang xuất các đoạn highlight...")
-        for idx, (start_sample, score) in enumerate(top_segments):
+        
+        # Lấy tên file gốc không có phần mở rộng
+        base_filename = os.path.splitext(os.path.basename(file_name))[0]
+        
+        # Xử lý tên file để tránh lỗi Unicode
+        if any(ord(c) > 127 for c in base_filename):
+            base_filename_ascii = unicodedata.normalize('NFKD', base_filename)
+            base_filename_ascii = re.sub(r'[^\x00-\x7F]+', '_', base_filename_ascii)
+            write_log(file_name, f"Đã chuyển đổi tên file có dấu '{base_filename}' thành '{base_filename_ascii}'")
+            base_filename = base_filename_ascii
+        
+        for idx, (start_sample, score, segment_type) in enumerate(top_segments):
             start_time_hl = start_sample / sr
             
             audio_segment = AudioSegment.from_file(audio_file_path)
@@ -350,30 +536,57 @@ async def process_audio_file(audio_file_path, output_dir, file_name, num_segment
             end_ms = min(len(audio_segment), start_ms + int(segment_duration * 1000))
             highlight_audio = audio_segment[start_ms:end_ms]
             
-            # Tạo tên file với timestamp để đảm bảo tính duy nhất
-            timestamp = int(start_time_hl)
-            # Tạo thư mục con cho file này
-            file_folder_name = os.path.splitext(os.path.basename(file_name))[0]
-            file_output_dir = os.path.join(output_dir, file_folder_name)
-            os.makedirs(file_output_dir, exist_ok=True)
+            # Chuyển đổi sang định dạng yêu cầu: 8000Hz, mono
+            highlight_audio = highlight_audio.set_frame_rate(8000).set_channels(1)
             
-            highlight_output_path = os.path.join(file_output_dir, f"highlight_{idx+1}_{timestamp}.mp3")
-            highlight_audio.export(highlight_output_path, format="mp3")
+            # Tạo tên file theo yêu cầu: tên file gốc + số thứ tự
+            highlight_output_path = os.path.join(output_dir, f"{base_filename} {idx+1}.mp3")
+            
+            # Xuất file MP3 với bitrate 64kbps
+            highlight_audio.export(
+                highlight_output_path, 
+                format="mp3",
+                bitrate="64k"
+            )
+            
+            # Kiểm tra kích thước file, nếu > 500KB thì giảm bitrate và xuất lại
+            file_size = os.path.getsize(highlight_output_path)
+            if file_size > 500 * 1024:  # 500KB
+                write_log(file_name, f"File {highlight_output_path} có kích thước {file_size/1024:.2f}KB > 500KB, đang giảm bitrate...")
+                # Giảm bitrate và xuất lại
+                highlight_audio.export(
+                    highlight_output_path, 
+                    format="mp3",
+                    bitrate="48k"  # Giảm bitrate xuống 48kbps
+                )
+                
+                # Nếu vẫn > 500KB, giảm thời lượng
+                file_size = os.path.getsize(highlight_output_path)
+                if file_size > 500 * 1024:
+                    # Giảm thời lượng xuống 40 giây (vẫn trong khoảng 40-60s)
+                    highlight_audio = highlight_audio[:40000]  # 40 giây
+                    highlight_audio.export(
+                        highlight_output_path, 
+                        format="mp3",
+                        bitrate="48k"
+                    )
+            
             write_log(file_name, f"Đã xuất highlight {idx+1} tại {start_time_hl:.2f}s vào file {highlight_output_path}")
             
-            # Lưu thông tin highlight vào database
+            # Lưu thông tin highlight vào database với thông tin loại đoạn
             save_highlight(job_id, idx+1, float(start_time_hl), highlight_output_path, float(score))
             
             highlights.append({
                 "highlight_time": float(start_time_hl),
                 "highlight_file": highlight_output_path,
                 "score": float(score),
-                "duration": segment_duration
+                "duration": segment_duration,
+                "type": segment_type  # Thêm thông tin loại đoạn
             })
         
         # Cập nhật trạng thái job thành công
         end_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        update_job_status(job_id, "COMPLETED", end_time, file_output_dir)
+        update_job_status(job_id, "COMPLETED", end_time, output_dir)
         write_log(file_name, f"Hoàn thành xử lý file {file_name} - Job ID: {job_id}")
         logger.info(f"Hoàn thành xử lý file {file_name} - Job ID: {job_id}")
         
@@ -400,7 +613,7 @@ async def process_audio_file(audio_file_path, output_dir, file_name, num_segment
         }
 
 @app.post("/highlight")
-async def get_highlight(audio_file: UploadFile, num_segments: int = 1, segment_duration: float = 5.0):
+async def get_highlight(audio_file: UploadFile, segment_duration: float = 40.0, num_segments: int = 2):
     # Tạo thư mục output nếu chưa tồn tại
     output_dir = os.path.join(os.getcwd(), "output")
     os.makedirs(output_dir, exist_ok=True)
@@ -409,7 +622,8 @@ async def get_highlight(audio_file: UploadFile, num_segments: int = 1, segment_d
         shutil.copyfileobj(audio_file.file, temp_audio)
         audio_path = temp_audio.name
 
-    # Xử lý file audio
+    # Xử lý file audio - truyền num_segments để xác định số lượng chorus cần lấy
+    # Số lượng chorus = num_segments - 1 (vì luôn lấy 1 main)
     result = await process_audio_file(audio_path, output_dir, audio_file.filename, num_segments, segment_duration)
     
     # Xóa file tạm sau khi xử lý xong
@@ -422,7 +636,7 @@ async def get_highlight(audio_file: UploadFile, num_segments: int = 1, segment_d
 
 # Endpoint mới để xử lý nhiều file cùng lúc
 @app.post("/highlight_multiple")
-async def get_multiple_highlights(audio_files: list[UploadFile], num_segments: int = 1, segment_duration: float = 5.0):
+async def get_multiple_highlights(audio_files: list[UploadFile], segment_duration: float = 40.0, num_segments: int = 2):
     # Tạo thư mục output nếu chưa tồn tại
     output_dir = os.path.join(os.getcwd(), "output")
     os.makedirs(output_dir, exist_ok=True)
@@ -434,8 +648,12 @@ async def get_multiple_highlights(audio_files: list[UploadFile], num_segments: i
             shutil.copyfileobj(audio_file.file, temp_audio)
             audio_path = temp_audio.name
         
-        # Xử lý file audio
+        # Truyền num_segments để xác định số lượng chorus cần lấy
+        # Số lượng chorus = num_segments - 1 (vì luôn lấy 1 main)
         result = await process_audio_file(audio_path, output_dir, audio_file.filename, num_segments, segment_duration)
+        
+        # Không cần gán type thủ công nữa vì process_audio_file đã xử lý
+        
         results.append({
             "filename": audio_file.filename,
             "result": result
@@ -455,16 +673,27 @@ async def download_highlight(file_path: str):
     if not os.path.exists(file_path):
         return {"error": "File không tồn tại"}
     
-    # Đảm bảo filename có đuôi .mp3
+    # Lấy tên file từ đường dẫn
     filename = os.path.basename(file_path)
-    if not filename.endswith('.mp3'):
-        filename += '.mp3'
+    
+    # Xác định media_type dựa trên phần mở rộng của file
+    if filename.endswith('.mp3'):
+        media_type = "audio/mpeg"
+    elif filename.endswith('.wav'):
+        media_type = "audio/wav"
+    else:
+        media_type = "audio/mpeg"  # Mặc định là MP3
+    
+    # Xử lý tên file để tránh lỗi Unicode khi encode sang latin-1
+    # Thay thế các ký tự Unicode không hợp lệ bằng ASCII
+    filename_ascii = unicodedata.normalize('NFKD', filename)
+    filename_ascii = re.sub(r'[^\x00-\x7F]+', '_', filename_ascii)
     
     return FileResponse(
         path=file_path, 
-        media_type="audio/mpeg", 
-        filename=filename,
-        headers={"Content-Disposition": f"attachment; filename={filename}"}
+        media_type=media_type, 
+        filename=filename_ascii,
+        headers={"Content-Disposition": f"attachment; filename={filename_ascii}"}
     )
 
 # Endpoint để lấy danh sách các job đã xử lý
