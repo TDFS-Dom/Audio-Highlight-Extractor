@@ -1,0 +1,33 @@
+[2025-03-07 15:10:22] Bắt đầu xử lý file KHOÁ LY BIỆT ｜ KARAOKE BEAT GỐC ｜ VOI BẢN ĐÔN.mp3 - Job ID: 15
+[2025-03-07 15:10:22] Đang tải file âm thanh...
+[2025-03-07 15:10:22] Đã tải file âm thanh: 307.49 giây, sample rate: 48000Hz
+[2025-03-07 15:10:22] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 15:10:22] Đã tính toán RMS: min=0.0000, max=0.3268, mean=0.0607
+[2025-03-07 15:10:23] Đã tính toán Spectral Centroid
+[2025-03-07 15:10:25] Đã tính toán Spectral Contrast
+[2025-03-07 15:10:25] Đã tính toán Onset Strength
+[2025-03-07 15:10:28] Đã tính toán Tempo (70.31 BPM) và Beat Strength
+[2025-03-07 15:11:00] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 15:11:01] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 15:11:01] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 15:11:01] Thiết lập cửa sổ trượt: frame_length=1920000, hop_length=24000
+[2025-03-07 15:11:01] Đã nội suy đặc trưng kết hợp
+[2025-03-07 15:11:01] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 15:11:01] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 15:11:04] Đang tính ma trận tự tương quan...
+[2025-03-07 15:12:24] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 15:12:27] Đã tính toán điểm số cho 535 đoạn
+[2025-03-07 15:12:27] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 15:12:27] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 15:12:28] Đã phát hiện 2021 cao trào tiềm năng
+[2025-03-07 15:12:28] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 15:12:28] Không tìm thấy cao trào nào, sử dụng phương pháp điểm số tổng hợp...
+[2025-03-07 15:12:28] Đã chọn đoạn highlight tại 230.50s với điểm số 0.2934
+[2025-03-07 15:12:28] Không tìm đủ 2 đoạn từ cao trào, đang sử dụng phương pháp điểm số tổng hợp...
+[2025-03-07 15:12:28] Đã chọn đoạn highlight bổ sung tại 190.50s với điểm số 0.2696
+[2025-03-07 15:12:28] Đã chọn tổng cộng 2 đoạn highlight
+[2025-03-07 15:12:28] Đang xuất các đoạn highlight...
+[2025-03-07 15:12:28] Đã chuyển đổi tên file có dấu 'KHOÁ LY BIỆT ｜ KARAOKE BEAT GỐC ｜ VOI BẢN ĐÔN' thành 'KHOA_ LY BIE_T | KARAOKE BEAT GO_C | VOI BA_N _O_N'
+[2025-03-07 15:12:31] Đã xuất highlight 1 tại 190.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/KHOA_ LY BIE_T | KARAOKE BEAT GO_C | VOI BA_N _O_N 1.mp3
+[2025-03-07 15:12:31] Đã xuất highlight 2 tại 230.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/KHOA_ LY BIE_T | KARAOKE BEAT GO_C | VOI BA_N _O_N 2.mp3
+[2025-03-07 15:12:31] Hoàn thành xử lý file KHOÁ LY BIỆT ｜ KARAOKE BEAT GỐC ｜ VOI BẢN ĐÔN.mp3 - Job ID: 15

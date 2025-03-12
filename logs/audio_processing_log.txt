@@ -1,0 +1,69 @@
+[2025-03-12 09:33:25.097] Phân tích giọng hát tại 0.00s: score=21.3787
+[2025-03-12 09:33:25.103] Phát hiện giọng hát tại 0.00s
+[2025-03-12 09:33:25.104] Điều chỉnh vị trí bắt đầu từ 123.10s sang 123.10s (lùi 3s từ khi phát hiện lời)
+[2025-03-12 09:33:27.973] Phân tích giọng hát tại 0.00s: score=0.1500
+[2025-03-12 09:33:28.085] Phát hiện giọng hát tại 0.75s
+[2025-03-12 09:33:28.086] Điều chỉnh vị trí bắt đầu từ 0.00s sang 0.00s (lùi 3s từ khi phát hiện lời)
+[2025-03-12 09:38:21.575] Phân tích giọng hát tại 123.10s: score=21.3787
+[2025-03-12 09:38:21.583] Đã phát hiện giọng hát tại vị trí 123.10s với điểm 21.3787
+[2025-03-12 09:38:21.583] Điều chỉnh vị trí từ 123.10s thành 123.10s (lời bắt đầu tại 123.10s)
+[2025-03-12 09:38:25.767] Phân tích giọng hát tại 36.87s: score=35.8996
+[2025-03-12 09:38:25.769] Đã phát hiện giọng hát tại vị trí 36.87s với điểm 35.8996
+[2025-03-12 09:38:25.769] Điều chỉnh vị trí từ 36.87s thành 36.87s (lời bắt đầu tại 36.87s)
+[2025-03-12 09:42:50.506] Phân tích giọng hát tại 123.10s: score=21.3787
+[2025-03-12 09:42:50.508] Đã phát hiện giọng hát tại vị trí 123.10s với điểm 21.3787
+[2025-03-12 09:42:50.510] Điều chỉnh vị trí từ 123.10s thành 123.10s (lời bắt đầu tại 123.10s)
+[2025-03-12 09:42:54.571] Phân tích giọng hát tại 8.03s: score=30.4567
+[2025-03-12 09:42:54.598] Đã phát hiện giọng hát tại vị trí 8.03s với điểm 30.4567
+[2025-03-12 09:42:54.598] Điều chỉnh vị trí từ 8.03s thành 8.03s (lời bắt đầu tại 8.03s)
+[2025-03-12 09:45:31.135] Phân tích giọng hát tại 112.06s: score=31.2715
+[2025-03-12 09:45:31.143] Đã phát hiện giọng hát tại vị trí 112.06s với điểm 31.2715
+[2025-03-12 09:45:31.143] Điều chỉnh vị trí từ 112.06s thành 112.06s (lời bắt đầu tại 112.06s)
+[2025-03-12 09:48:38.988] Phân tích giọng hát tại 123.60s: score=23.0645
+[2025-03-12 09:48:38.996] Đã phát hiện giọng hát tại vị trí 123.60s với điểm 23.0645
+[2025-03-12 09:48:38.996] Điều chỉnh vị trí từ 123.60s thành 123.60s (lời bắt đầu tại 123.60s)
+[2025-03-12 09:48:42.764] Phân tích giọng hát tại 10.20s: score=38.0868
+[2025-03-12 09:48:42.769] Đã phát hiện giọng hát tại vị trí 10.20s với điểm 38.0868
+[2025-03-12 09:48:42.769] Điều chỉnh vị trí từ 10.20s thành 10.20s (lời bắt đầu tại 10.20s)
+[2025-03-12 09:51:34.727] Phân tích giọng hát tại 112.56s: score=35.7314
+[2025-03-12 09:51:34.995] Đã phát hiện giọng hát tại vị trí 112.56s với điểm 35.7314
+[2025-03-12 09:51:34.996] Điều chỉnh vị trí từ 112.56s thành 112.56s (lời bắt đầu tại 112.56s)
+[2025-03-12 09:51:40.234] Phân tích giọng hát tại 0.00s: score=118.7665
+[2025-03-12 09:51:40.237] Đã phát hiện giọng hát tại vị trí 0.00s với điểm 118.7665
+[2025-03-12 09:51:40.237] Điều chỉnh vị trí từ 0.00s thành 0.00s (lời bắt đầu tại 0.00s)
+[2025-03-12 09:57:09.889] Phân tích giọng hát tại 123.60s: score=23.0645
+[2025-03-12 09:57:09.896] Đã phát hiện giọng hát tại vị trí 123.60s với điểm 23.0645
+[2025-03-12 09:57:09.897] MAIN: Điều chỉnh vị trí từ 123.60s thành 123.60s (lời bắt đầu tại 123.60s)
+[2025-03-12 09:57:14.392] Phân tích giọng hát tại 10.20s: score=38.0868
+[2025-03-12 09:57:14.401] Đã phát hiện giọng hát tại vị trí 10.20s với điểm 38.0868
+[2025-03-12 09:57:14.401] CHORUS: Điều chỉnh vị trí từ 10.20s thành 10.20s (nhạc dẫn 3s trước lời tại 10.20s)
+[2025-03-12 10:00:27.205] Phân tích giọng hát tại 112.56s: score=35.7314
+[2025-03-12 10:00:27.208] Đã phát hiện giọng hát tại vị trí 112.56s với điểm 35.7314
+[2025-03-12 10:00:27.208] MAIN: Điều chỉnh vị trí từ 112.56s thành 112.56s (lời bắt đầu tại 112.56s)
+[2025-03-12 10:00:33.708] Phân tích giọng hát tại 0.00s: score=118.7665
+[2025-03-12 10:00:33.717] Đã phát hiện giọng hát tại vị trí 0.00s với điểm 118.7665
+[2025-03-12 10:00:33.718] CHORUS: Điều chỉnh vị trí từ 0.00s thành 0.00s (nhạc dẫn 3s trước lời tại 0.00s)
+[2025-03-12 10:05:52.819] Đang phát hiện lời bài hát bằng Whisper cho đoạn từ 112.56s
+[2025-03-12 10:06:10.785] Phát hiện lời bài hát tại 120.72s
+[2025-03-12 10:06:10.790] MAIN (Whisper): Điều chỉnh vị trí từ 112.56s thành 119.72s (lời bắt đầu tại 120.72s)
+[2025-03-12 10:06:10.931] Đang phát hiện lời bài hát bằng Whisper cho đoạn từ 6.38s
+[2025-03-12 10:06:21.361] Phát hiện lời bài hát tại 25.70s
+[2025-03-12 10:06:21.369] CHORUS (Whisper): Điều chỉnh vị trí từ 6.38s thành 22.70s (nhạc dẫn 3s trước lời tại 25.70s)
+[2025-03-12 10:18:35.419] Đang phát hiện lời bài hát bằng Whisper cho đoạn từ 123.60s
+[2025-03-12 10:18:42.252] Phát hiện lời bài hát tại 125.56s
+[2025-03-12 10:18:42.257] MAIN (Whisper): Điều chỉnh vị trí từ 123.60s thành 124.56s (lời bắt đầu tại 125.56s)
+[2025-03-12 10:18:42.455] Đang phát hiện lời bài hát bằng Whisper cho đoạn từ 11.17s
+[2025-03-12 10:18:59.252] Phát hiện lời bài hát tại 22.03s
+[2025-03-12 10:18:59.257] CHORUS (Whisper): Điều chỉnh vị trí từ 11.17s thành 19.03s (nhạc dẫn 3s trước lời tại 22.03s)
+[2025-03-12 15:51:17.604] Đang phát hiện lời bài hát bằng Whisper cho đoạn từ 123.60s
+[2025-03-12 15:51:23.256] Phát hiện lời bài hát tại 125.56s
+[2025-03-12 15:51:23.261] MAIN (Whisper): Điều chỉnh vị trí từ 123.60s thành 124.56s (lời bắt đầu tại 125.56s)
+[2025-03-12 15:51:23.379] Đang phát hiện lời bài hát bằng Whisper cho đoạn từ 11.17s
+[2025-03-12 15:51:35.587] Phát hiện lời bài hát tại 22.03s
+[2025-03-12 15:51:35.591] CHORUS (Whisper): Điều chỉnh vị trí từ 11.17s thành 19.03s (nhạc dẫn 3s trước lời tại 22.03s)
+[2025-03-12 15:52:48.620] Đang phát hiện lời bài hát bằng Whisper cho đoạn từ 112.56s
+[2025-03-12 15:52:58.104] Phát hiện lời bài hát tại 120.72s
+[2025-03-12 15:52:58.109] MAIN (Whisper): Điều chỉnh vị trí từ 112.56s thành 119.72s (lời bắt đầu tại 120.72s)
+[2025-03-12 15:52:58.254] Đang phát hiện lời bài hát bằng Whisper cho đoạn từ 6.38s
+[2025-03-12 15:53:06.936] Phát hiện lời bài hát tại 25.70s
+[2025-03-12 15:53:06.942] CHORUS (Whisper): Điều chỉnh vị trí từ 6.38s thành 22.70s (nhạc dẫn 3s trước lời tại 25.70s)

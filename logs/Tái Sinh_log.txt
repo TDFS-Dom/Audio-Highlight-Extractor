@@ -1,0 +1,887 @@
+[2025-03-07 15:13:21] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 16
+[2025-03-07 15:13:21] Đang tải file âm thanh...
+[2025-03-07 15:13:21] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-07 15:13:21] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 15:13:22] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-07 15:13:22] Đã tính toán Spectral Centroid
+[2025-03-07 15:13:24] Đã tính toán Spectral Contrast
+[2025-03-07 15:13:24] Đã tính toán Onset Strength
+[2025-03-07 15:13:27] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-07 15:13:52] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 15:13:53] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 15:13:53] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 15:13:53] Thiết lập cửa sổ trượt: frame_length=1764000, hop_length=22050
+[2025-03-07 15:13:53] Đã nội suy đặc trưng kết hợp
+[2025-03-07 15:13:53] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 15:13:53] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 15:13:55] Đang tính ma trận tự tương quan...
+[2025-03-07 15:14:51] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 15:14:53] Đã tính toán điểm số cho 400 đoạn
+[2025-03-07 15:14:53] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 15:14:53] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 15:14:53] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-07 15:14:53] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 15:14:53] Không tìm thấy cao trào nào, sử dụng phương pháp điểm số tổng hợp...
+[2025-03-07 15:14:53] Đã chọn đoạn highlight tại 146.50s với điểm số 0.2233
+[2025-03-07 15:14:53] Không tìm đủ 2 đoạn từ cao trào, đang sử dụng phương pháp điểm số tổng hợp...
+[2025-03-07 15:14:53] Đã chọn đoạn highlight bổ sung tại 39.50s với điểm số 0.2183
+[2025-03-07 15:14:53] Đã chọn tổng cộng 2 đoạn highlight
+[2025-03-07 15:14:53] Đang xuất các đoạn highlight...
+[2025-03-07 15:14:53] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Ta_i Sinh'
+[2025-03-07 15:14:53] Đã xuất highlight 1 tại 39.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Ta_i Sinh 1.mp3
+[2025-03-07 15:14:54] Đã xuất highlight 2 tại 146.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Ta_i Sinh 2.mp3
+[2025-03-07 15:14:54] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 16
+[2025-03-07 15:23:19] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 17
+[2025-03-07 15:23:19] Đang tải file âm thanh...
+[2025-03-07 15:23:20] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-07 15:23:20] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 15:23:21] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-07 15:23:21] Đã tính toán Spectral Centroid
+[2025-03-07 15:23:22] Đã tính toán Spectral Contrast
+[2025-03-07 15:23:22] Đã tính toán Onset Strength
+[2025-03-07 15:23:24] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-07 15:23:48] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 15:23:48] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 15:23:48] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 15:23:48] Thiết lập cửa sổ trượt: frame_length=1764000, hop_length=22050
+[2025-03-07 15:23:48] Đã nội suy đặc trưng kết hợp
+[2025-03-07 15:23:48] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 15:23:48] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 15:23:50] Đang tính ma trận tự tương quan...
+[2025-03-07 15:24:27] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 15:24:28] Đã tính toán điểm số cho 400 đoạn
+[2025-03-07 15:24:28] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 15:24:28] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 15:24:29] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-07 15:24:29] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 15:24:29] Đang tìm đoạn cao trào (main)...
+[2025-03-07 15:24:29] Không tìm thấy cao trào, sử dụng đoạn có điểm tổng hợp cao nhất cho main...
+[2025-03-07 15:24:29] Đã chọn đoạn main tại 146.50s với điểm số 0.2233
+[2025-03-07 15:24:29] Đang tìm 1 đoạn điệp khúc (chorus)...
+[2025-03-07 15:24:30] Đã chọn đoạn chorus (điệp khúc) tại 10.50s với điểm số 0.2798
+[2025-03-07 15:24:30] Đã chọn tổng cộng 2 đoạn highlight (main: 1, chorus: 1)
+[2025-03-07 15:24:30] Đang xuất các đoạn highlight...
+[2025-03-07 15:24:30] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Ta_i Sinh'
+[2025-03-07 15:24:30] Đã xuất highlight 1 tại 10.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Ta_i Sinh 1.mp3
+[2025-03-07 15:24:31] Đã xuất highlight 2 tại 146.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Ta_i Sinh 2.mp3
+[2025-03-07 15:24:31] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 17
+[2025-03-07 16:03:14] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 21
+[2025-03-07 16:03:14] Đang tải file âm thanh...
+[2025-03-07 16:03:15] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-07 16:03:15] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 16:03:15] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-07 16:03:15] Đã tính toán Spectral Centroid
+[2025-03-07 16:03:16] Đã tính toán Spectral Contrast
+[2025-03-07 16:03:16] Đã tính toán Onset Strength
+[2025-03-07 16:03:18] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-07 16:03:39] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 16:03:39] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 16:03:39] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 16:03:39] Thiết lập cửa sổ trượt: frame_length=1764000, hop_length=22050
+[2025-03-07 16:03:39] Đã nội suy đặc trưng kết hợp
+[2025-03-07 16:03:39] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 16:03:39] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 16:03:41] Đang tính ma trận tự tương quan...
+[2025-03-07 16:04:19] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 16:04:21] Đã tính toán điểm số cho 400 đoạn
+[2025-03-07 16:04:21] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 16:04:21] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 16:04:21] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-07 16:04:21] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 16:04:21] Đang tìm đoạn cao trào (main)...
+[2025-03-07 16:04:21] Không tìm thấy cao trào, sử dụng đoạn có điểm tổng hợp cao nhất cho main...
+[2025-03-07 16:04:21] Đã chọn đoạn main tại 146.50s với điểm số 0.2233
+[2025-03-07 16:04:21] Đang tìm 1 đoạn điệp khúc (chorus)...
+[2025-03-07 16:04:23] Đã chọn đoạn chorus (điệp khúc) tại 10.50s với điểm số 0.2798
+[2025-03-07 16:04:23] Đã chọn tổng cộng 2 đoạn highlight (main: 1, chorus: 1)
+[2025-03-07 16:04:23] Đang xuất các đoạn highlight...
+[2025-03-07 16:04:23] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-07 16:04:23] Đã xuất highlight 1 tại 10.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh 1.mp3
+[2025-03-07 16:04:24] Đã xuất highlight 2 tại 146.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh 2.mp3
+[2025-03-07 16:04:24] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 21
+[2025-03-07 16:09:03] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 25
+[2025-03-07 16:09:03] Đang tải file âm thanh...
+[2025-03-07 16:09:03] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-07 16:09:03] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 16:09:03] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-07 16:09:04] Đã tính toán Spectral Centroid
+[2025-03-07 16:09:05] Đã tính toán Spectral Contrast
+[2025-03-07 16:09:05] Đã tính toán Onset Strength
+[2025-03-07 16:09:07] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-07 16:09:27] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 16:09:28] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 16:09:28] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 16:09:28] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-07 16:09:28] Đã nội suy đặc trưng kết hợp
+[2025-03-07 16:09:28] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 16:09:28] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 16:09:29] Đang tính ma trận tự tương quan...
+[2025-03-07 16:10:09] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 16:10:10] Đã tính toán điểm số cho 390 đoạn
+[2025-03-07 16:10:10] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 16:10:10] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 16:10:11] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-07 16:10:11] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 16:10:11] Đang tìm đoạn cao trào (main)...
+[2025-03-07 16:10:11] Không tìm thấy cao trào, sử dụng đoạn có điểm tổng hợp cao nhất cho main...
+[2025-03-07 16:10:11] Đã chọn đoạn main tại 124.00s với điểm số 0.2191
+[2025-03-07 16:10:11] Đang tìm 1 đoạn điệp khúc (chorus)...
+[2025-03-07 16:10:12] Đã chọn đoạn chorus (điệp khúc) tại 10.50s với điểm số 0.2855
+[2025-03-07 16:10:12] Đã chọn tổng cộng 2 đoạn highlight (main: 1, chorus: 1)
+[2025-03-07 16:10:12] Đang xuất các đoạn highlight...
+[2025-03-07 16:10:12] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-07 16:10:13] Đã xuất highlight 1 tại 10.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh 1.mp3
+[2025-03-07 16:10:13] Đã xuất highlight 2 tại 124.00s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh 2.mp3
+[2025-03-07 16:10:13] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 25
+[2025-03-07 16:12:13] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 26
+[2025-03-07 16:12:13] Đang tải file âm thanh...
+[2025-03-07 16:12:14] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-07 16:12:14] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 16:12:14] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-07 16:12:15] Đã tính toán Spectral Centroid
+[2025-03-07 16:12:15] Đã tính toán Spectral Contrast
+[2025-03-07 16:12:16] Đã tính toán Onset Strength
+[2025-03-07 16:12:18] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-07 16:12:39] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 16:12:39] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 16:12:39] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 16:12:39] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-07 16:12:39] Đã nội suy đặc trưng kết hợp
+[2025-03-07 16:12:39] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 16:12:39] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 16:12:41] Đang tính ma trận tự tương quan...
+[2025-03-07 16:13:18] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 16:13:20] Đã tính toán điểm số cho 390 đoạn
+[2025-03-07 16:13:20] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 16:13:20] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 16:13:20] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-07 16:13:20] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 16:13:20] Đang tìm đoạn cao trào (main)...
+[2025-03-07 16:13:20] Không tìm thấy cao trào, sử dụng đoạn có điểm tổng hợp cao nhất cho main...
+[2025-03-07 16:13:20] Đã chọn đoạn main tại 124.00s với điểm số 0.2191
+[2025-03-07 16:13:20] Đang tìm 1 đoạn điệp khúc (chorus)...
+[2025-03-07 16:13:22] Đã chọn đoạn chorus (điệp khúc) tại 10.50s với điểm số 0.2855
+[2025-03-07 16:13:22] Đã chọn tổng cộng 2 đoạn highlight (main: 1, chorus: 1)
+[2025-03-07 16:13:22] Đang xuất các đoạn highlight...
+[2025-03-07 16:13:22] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-07 16:13:22] Đã xuất highlight 1 (chorus) tại 10.50s với thời lượng 45.00s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh 1.mp3
+[2025-03-07 16:13:23] Đã xuất highlight 2 (main) tại 124.00s với thời lượng 45.00s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh 2.mp3
+[2025-03-07 16:13:23] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 26
+[2025-03-07 16:18:42] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 27
+[2025-03-07 16:18:42] Đang tải file âm thanh...
+[2025-03-07 16:18:43] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-07 16:18:43] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 16:18:44] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-07 16:18:44] Đã tính toán Spectral Centroid
+[2025-03-07 16:18:45] Đã tính toán Spectral Contrast
+[2025-03-07 16:18:45] Đã tính toán Onset Strength
+[2025-03-07 16:18:48] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-07 16:19:10] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 16:19:10] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 16:19:10] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 16:19:10] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-07 16:19:10] Đã nội suy đặc trưng kết hợp
+[2025-03-07 16:19:10] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 16:19:10] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 16:19:11] Đang tính ma trận tự tương quan...
+[2025-03-07 16:19:49] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 16:19:51] Đã tính toán điểm số cho 390 đoạn
+[2025-03-07 16:19:51] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 16:19:51] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 16:19:51] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-07 16:19:51] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 16:19:51] Đang tìm đoạn cao trào (main)...
+[2025-03-07 16:19:51] Không tìm thấy cao trào, sử dụng đoạn có điểm tổng hợp cao nhất cho main...
+[2025-03-07 16:19:51] Phân tích intro tại 124.00s: vocal_ratio=24.6945, mfcc_var=308.2604, is_instrumental=False
+[2025-03-07 16:19:51] Đã chọn đoạn main tại 124.00s với điểm số 0.2191
+[2025-03-07 16:19:51] Đang tìm 1 đoạn điệp khúc (chorus)...
+[2025-03-07 16:19:53] Phân tích intro tại 10.50s: vocal_ratio=47.5897, mfcc_var=247.2475, is_instrumental=False
+[2025-03-07 16:19:53] Đã chọn đoạn chorus (điệp khúc) tại 10.50s với điểm số 0.2855
+[2025-03-07 16:19:53] Đã chọn tổng cộng 2 đoạn highlight (main: 1, chorus: 1)
+[2025-03-07 16:19:53] Đang xuất các đoạn highlight...
+[2025-03-07 16:19:53] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-07 16:19:53] Đã xuất highlight 1 tại 10.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh 1.mp3
+[2025-03-07 16:19:54] Đã xuất highlight 2 tại 124.00s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh 2.mp3
+[2025-03-07 16:19:54] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 27
+[2025-03-07 16:22:43] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 28
+[2025-03-07 16:22:43] Đang tải file âm thanh...
+[2025-03-07 16:22:44] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-07 16:22:44] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 16:22:45] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-07 16:22:45] Đã tính toán Spectral Centroid
+[2025-03-07 16:22:46] Đã tính toán Spectral Contrast
+[2025-03-07 16:22:46] Đã tính toán Onset Strength
+[2025-03-07 16:22:48] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-07 16:23:11] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 16:23:12] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 16:23:12] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 16:23:12] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-07 16:23:12] Đã nội suy đặc trưng kết hợp
+[2025-03-07 16:23:12] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 16:23:12] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 16:23:14] Đang tính ma trận tự tương quan...
+[2025-03-07 16:23:54] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 16:23:55] Đã tính toán điểm số cho 390 đoạn
+[2025-03-07 16:23:55] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 16:23:55] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 16:23:56] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-07 16:23:56] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 16:23:56] Đang tìm đoạn cao trào (main)...
+[2025-03-07 16:23:56] Không tìm thấy cao trào, sử dụng đoạn có điểm tổng hợp cao nhất cho main...
+[2025-03-07 16:23:56] Phát hiện giọng hát tại 0.00s từ đầu đoạn
+[2025-03-07 16:23:56] Không phát hiện giọng hát trong 10.00s đầu
+[2025-03-07 16:23:56] Phát hiện nhạc không lời kéo dài 3.00s tại đầu đoạn main
+[2025-03-07 16:23:56] Đã điều chỉnh vị trí bắt đầu đoạn main sang 124.00s để giới hạn nhạc không lời
+[2025-03-07 16:23:56] Đã chọn đoạn main tại 124.00s với điểm số 0.2191
+[2025-03-07 16:23:56] Đang tìm 1 đoạn điệp khúc (chorus)...
+[2025-03-07 16:23:58] Phát hiện giọng hát tại 0.00s từ đầu đoạn
+[2025-03-07 16:23:58] Không phát hiện giọng hát trong 10.00s đầu
+[2025-03-07 16:23:58] Phát hiện nhạc không lời kéo dài 3.00s tại đầu đoạn chorus
+[2025-03-07 16:23:58] Đã điều chỉnh vị trí bắt đầu đoạn chorus sang 10.50s để giới hạn nhạc không lời
+[2025-03-07 16:23:58] Đã chọn đoạn chorus (điệp khúc) tại 10.50s với điểm số 0.2855
+[2025-03-07 16:23:58] Đã chọn tổng cộng 2 đoạn highlight (main: 1, chorus: 1)
+[2025-03-07 16:23:58] Đang xuất các đoạn highlight...
+[2025-03-07 16:23:58] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-07 16:23:58] Đã xuất highlight 1 tại 10.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh 1.mp3
+[2025-03-07 16:23:59] Đã xuất highlight 2 tại 124.00s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh 2.mp3
+[2025-03-07 16:23:59] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 28
+[2025-03-07 16:30:12] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 29
+[2025-03-07 16:30:12] Đang tải file âm thanh...
+[2025-03-07 16:30:13] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-07 16:30:13] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 16:30:13] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-07 16:30:14] Đã tính toán Spectral Centroid
+[2025-03-07 16:30:15] Đã tính toán Spectral Contrast
+[2025-03-07 16:30:15] Đã tính toán Onset Strength
+[2025-03-07 16:30:17] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-07 16:30:39] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 16:30:39] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 16:30:39] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 16:30:39] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-07 16:30:39] Đã nội suy đặc trưng kết hợp
+[2025-03-07 16:30:39] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 16:30:39] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 16:30:41] Đang tính ma trận tự tương quan...
+[2025-03-07 16:31:23] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 16:31:25] Đã tính toán điểm số cho 390 đoạn
+[2025-03-07 16:31:25] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 16:31:25] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 16:31:25] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-07 16:31:25] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 16:31:25] Đang tìm đoạn cao trào (main)...
+[2025-03-07 16:31:25] Không tìm thấy cao trào, sử dụng đoạn có điểm tổng hợp cao nhất cho main...
+[2025-03-07 16:31:25] Tìm thấy cao độ cao nhất tại 119.78s, điều chỉnh vị trí bắt đầu về 116.78s
+[2025-03-07 16:31:25] Phát hiện giọng hát tại 0.00s từ đầu đoạn
+[2025-03-07 16:31:25] Không phát hiện giọng hát trong 10.00s đầu
+[2025-03-07 16:31:25] Phát hiện nhạc không lời kéo dài 3.00s tại đầu đoạn main
+[2025-03-07 16:31:25] Đã điều chỉnh vị trí bắt đầu đoạn main sang 116.78s để giới hạn nhạc không lời
+[2025-03-07 16:31:25] Đã chọn đoạn main tại vị trí cao độ cao nhất 116.78s với điểm số 0.2191
+[2025-03-07 16:31:25] Đang tìm 1 đoạn điệp khúc (chorus)...
+[2025-03-07 16:31:27] Phát hiện giọng hát tại 0.00s từ đầu đoạn
+[2025-03-07 16:31:27] Không phát hiện giọng hát trong 10.00s đầu
+[2025-03-07 16:31:27] Phát hiện nhạc không lời kéo dài 3.00s tại đầu đoạn chorus
+[2025-03-07 16:31:27] Đã điều chỉnh vị trí bắt đầu đoạn chorus sang 10.50s để giới hạn nhạc không lời
+[2025-03-07 16:31:27] Đã chọn đoạn chorus (điệp khúc) tại 10.50s với điểm số 0.2855
+[2025-03-07 16:31:27] Đã chọn tổng cộng 2 đoạn highlight (main: 1, chorus: 1)
+[2025-03-07 16:31:27] Đang xuất các đoạn highlight...
+[2025-03-07 16:31:27] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-07 16:31:28] Đã xuất highlight 1 tại 10.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh 1.mp3
+[2025-03-07 16:31:28] Đã xuất highlight 2 tại 116.78s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh 2.mp3
+[2025-03-07 16:31:28] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 29
+[2025-03-07 16:35:51] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 30
+[2025-03-07 16:35:51] Đang tải file âm thanh...
+[2025-03-07 16:35:52] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-07 16:35:52] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 16:35:53] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-07 16:35:53] Đã tính toán Spectral Centroid
+[2025-03-07 16:35:54] Đã tính toán Spectral Contrast
+[2025-03-07 16:35:54] Đã tính toán Onset Strength
+[2025-03-07 16:35:56] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-07 16:36:16] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 16:36:16] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 16:36:16] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 16:36:16] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-07 16:36:16] Đã nội suy đặc trưng kết hợp
+[2025-03-07 16:36:16] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 16:36:16] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 16:36:18] Đang tính ma trận tự tương quan...
+[2025-03-07 16:36:59] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 16:37:01] Đã tính toán điểm số cho 390 đoạn
+[2025-03-07 16:37:01] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 16:37:01] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 16:37:01] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-07 16:37:01] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 16:37:01] Đang tìm đoạn cao trào (main)...
+[2025-03-07 16:37:01] Không tìm thấy cao trào, sử dụng đoạn có điểm tổng hợp cao nhất cho main...
+[2025-03-07 16:37:01] Tìm thấy cao độ cao nhất tại 119.78s, điều chỉnh vị trí bắt đầu về 116.78s
+[2025-03-07 16:37:02] Lỗi khi xử lý file Tái Sinh.mp3: name 'has_vocal' is not defined
+[2025-03-07 16:44:38] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 31
+[2025-03-07 16:44:38] Đang tải file âm thanh...
+[2025-03-07 16:44:39] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-07 16:44:39] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 16:44:39] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-07 16:44:40] Đã tính toán Spectral Centroid
+[2025-03-07 16:44:41] Đã tính toán Spectral Contrast
+[2025-03-07 16:44:41] Đã tính toán Onset Strength
+[2025-03-07 16:44:43] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-07 16:45:07] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 16:45:07] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 16:45:07] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 16:45:07] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-07 16:45:07] Đã nội suy đặc trưng kết hợp
+[2025-03-07 16:45:07] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 16:45:07] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 16:45:09] Đang tính ma trận tự tương quan...
+[2025-03-07 16:45:43] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 16:45:45] Đã tính toán điểm số cho 390 đoạn
+[2025-03-07 16:45:45] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 16:45:45] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 16:45:45] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-07 16:45:45] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 16:45:45] Đang tìm đoạn cao trào (main)...
+[2025-03-07 16:45:45] Không tìm thấy cao trào, sử dụng đoạn có điểm tổng hợp cao nhất cho main...
+[2025-03-07 16:45:45] Tìm thấy cao độ cao nhất tại 119.78s, điều chỉnh vị trí bắt đầu về 116.78s
+[2025-03-07 16:45:46] Phát hiện giọng hát tại 0.00s từ đầu đoạn với độ tin cậy 15.7461
+[2025-03-07 16:45:46] Không phát hiện rõ điểm bắt đầu giọng hát, chọn điểm có độ tin cậy cao nhất tại 0.00s
+[2025-03-07 16:45:46] Đã chọn đoạn main tại vị trí cao độ cao nhất 116.78s với điểm số 0.2191
+[2025-03-07 16:45:46] Đang tìm 1 đoạn điệp khúc (chorus)...
+[2025-03-07 16:45:48] Tìm thấy cao độ cao nhất tại 6.03s, điều chỉnh vị trí bắt đầu về 3.03s
+[2025-03-07 16:45:49] Phát hiện giọng hát tại 0.00s từ đầu đoạn với độ tin cậy 14.3956
+[2025-03-07 16:45:49] Không phát hiện rõ điểm bắt đầu giọng hát, chọn điểm có độ tin cậy cao nhất tại 0.00s
+[2025-03-07 16:45:49] Đã chọn đoạn chorus (điệp khúc) tại vị trí cao độ cao nhất 3.03s với điểm số 0.2855
+[2025-03-07 16:45:49] Đã chọn tổng cộng 2 đoạn highlight (main: 1, chorus: 1)
+[2025-03-07 16:45:49] Đang xuất các đoạn highlight...
+[2025-03-07 16:45:49] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-07 16:45:50] Đã xuất highlight 1 tại 3.03s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh 1.mp3
+[2025-03-07 16:45:50] Đã xuất highlight 2 tại 116.78s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh 2.mp3
+[2025-03-07 16:45:50] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 31
+[2025-03-12 08:59:01.793] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 32
+[2025-03-12 09:00:00.154] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 33
+[2025-03-12 09:00:00.157] Đang tải file âm thanh...
+[2025-03-12 09:00:02.099] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-12 09:00:02.099] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:00:02.642] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:00:03.143] Đã tính toán Spectral Centroid
+[2025-03-12 09:00:04.255] Đã tính toán Spectral Contrast
+[2025-03-12 09:00:04.648] Đã tính toán Onset Strength
+[2025-03-12 09:00:08.018] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:00:35.467] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:00:35.740] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:00:35.741] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:00:36.115] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:00:36.538] Đã tính toán Spectral Centroid
+[2025-03-12 09:00:37.557] Đã tính toán Spectral Contrast
+[2025-03-12 09:00:37.855] Đã tính toán Onset Strength
+[2025-03-12 09:00:39.559] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:01:02.621] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:01:02.932] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:01:02.934] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 09:01:02.934] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 09:01:03.070] Đã nội suy đặc trưng kết hợp
+[2025-03-12 09:01:03.070] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 09:01:03.070] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 09:01:04.847] Đang tính ma trận tự tương quan...
+[2025-03-12 09:01:47.293] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-12 09:01:49.076] Đã tính toán điểm số cho 390 đoạn
+[2025-03-12 09:01:49.077] Đã sắp xếp các đoạn theo điểm số
+[2025-03-12 09:01:49.077] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-12 09:01:49.156] Lỗi khi áp dụng savgol_filter: name 'signal' is not defined, sử dụng dữ liệu gốc
+[2025-03-12 09:01:49.157] Lỗi khi tìm peaks: name 'find_peaks' is not defined, sử dụng phương pháp thay thế
+[2025-03-12 09:01:50.045] Đã phát hiện 10 cao trào tiềm năng bằng phương pháp thay thế
+[2025-03-12 09:01:50.045] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-12 09:01:50.045] Đang tìm đoạn cao trào (main)...
+[2025-03-12 09:01:50.045] Không tìm thấy cao trào, sử dụng đoạn có điểm tổng hợp cao nhất cho main...
+[2025-03-12 09:01:51.487] Phát hiện nhạc không lời kéo dài 118.78s tại đầu đoạn main
+[2025-03-12 09:01:51.487] Đã điều chỉnh vị trí bắt đầu đoạn main sang 234.55s để giới hạn nhạc không lời
+[2025-03-12 09:01:51.488] Đã chọn đoạn main tại vị trí cao độ cao nhất 234.55s với điểm số 0.2191
+[2025-03-12 09:01:51.491] Đang tìm 1 đoạn điệp khúc (chorus)...
+[2025-03-12 09:01:54.486] Phát hiện nhạc không lời kéo dài 4.03s tại đầu đoạn chorus
+[2025-03-12 09:01:54.504] Đã điều chỉnh vị trí bắt đầu đoạn chorus sang 5.06s để giới hạn nhạc không lời
+[2025-03-12 09:01:54.504] Đã chọn đoạn chorus (điệp khúc) tại vị trí cao độ cao nhất 5.06s với điểm số 0.2855
+[2025-03-12 09:01:54.505] Đã chọn tổng cộng 2 đoạn highlight (main: 1, chorus: 1)
+[2025-03-12 09:01:54.509] Đang xuất các đoạn highlight...
+[2025-03-12 09:01:54.509] Lỗi khi xử lý file Tái Sinh.mp3: name 'os' is not defined
+[2025-03-12 09:03:33.221] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 34
+[2025-03-12 09:03:33.221] Đang tải file âm thanh...
+[2025-03-12 09:03:34.291] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-12 09:03:34.292] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:03:34.557] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:03:34.984] Đã tính toán Spectral Centroid
+[2025-03-12 09:03:35.884] Đã tính toán Spectral Contrast
+[2025-03-12 09:03:36.177] Đã tính toán Onset Strength
+[2025-03-12 09:03:39.498] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:04:04.640] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:04:04.965] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:04:04.965] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:04:05.352] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:04:05.860] Đã tính toán Spectral Centroid
+[2025-03-12 09:04:06.803] Đã tính toán Spectral Contrast
+[2025-03-12 09:04:07.087] Đã tính toán Onset Strength
+[2025-03-12 09:04:08.938] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:04:34.675] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:04:35.002] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:04:35.005] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 09:04:35.006] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 09:04:35.118] Đã nội suy đặc trưng kết hợp
+[2025-03-12 09:04:35.118] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 09:04:35.118] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 09:04:38.064] Đang tính ma trận tự tương quan...
+[2025-03-12 09:05:26.279] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-12 09:05:28.202] Đã tính toán điểm số cho 390 đoạn
+[2025-03-12 09:05:28.202] Đã sắp xếp các đoạn theo điểm số
+[2025-03-12 09:05:28.202] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-12 09:05:28.506] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-12 09:05:28.506] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-12 09:05:28.506] Đang tìm đoạn cao trào (main)...
+[2025-03-12 09:05:28.506] Không tìm thấy cao trào, sử dụng đoạn có điểm tổng hợp cao nhất cho main...
+[2025-03-12 09:05:30.006] Phát hiện nhạc không lời kéo dài 118.78s tại đầu đoạn main
+[2025-03-12 09:05:30.006] Đã điều chỉnh vị trí bắt đầu đoạn main sang 234.55s để giới hạn nhạc không lời
+[2025-03-12 09:05:30.006] Đã chọn đoạn main tại vị trí cao độ cao nhất 234.55s với điểm số 0.2191
+[2025-03-12 09:05:30.006] Đang tìm 1 đoạn điệp khúc (chorus)...
+[2025-03-12 09:05:33.275] Phát hiện nhạc không lời kéo dài 4.03s tại đầu đoạn chorus
+[2025-03-12 09:05:33.276] Đã điều chỉnh vị trí bắt đầu đoạn chorus sang 5.06s để giới hạn nhạc không lời
+[2025-03-12 09:05:33.276] Đã chọn đoạn chorus (điệp khúc) tại vị trí cao độ cao nhất 5.06s với điểm số 0.2855
+[2025-03-12 09:05:33.276] Đã chọn tổng cộng 2 đoạn highlight (main: 1, chorus: 1)
+[2025-03-12 09:05:33.277] Đang xuất các đoạn highlight...
+[2025-03-12 09:05:33.301] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-12 09:05:35.607] Đã xuất highlight 1 tại 5.06s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh 1.mp3
+[2025-03-12 09:05:36.010] Đã xuất highlight 2 tại 234.55s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh 2.mp3
+[2025-03-12 09:05:36.013] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 34
+[2025-03-12 09:09:27.685] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 35
+[2025-03-12 09:09:27.686] Đang tải file âm thanh...
+[2025-03-12 09:09:29.217] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-12 09:09:29.217] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:09:29.499] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:09:29.955] Đã tính toán Spectral Centroid
+[2025-03-12 09:09:31.006] Đã tính toán Spectral Contrast
+[2025-03-12 09:09:31.398] Đã tính toán Onset Strength
+[2025-03-12 09:09:34.101] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:10:03.777] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:10:04.183] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:10:04.183] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:10:04.654] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:10:05.115] Đã tính toán Spectral Centroid
+[2025-03-12 09:10:06.061] Đã tính toán Spectral Contrast
+[2025-03-12 09:10:06.695] Đã tính toán Onset Strength
+[2025-03-12 09:10:08.996] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:10:46.777] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:10:47.335] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:10:47.336] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 09:10:47.336] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 09:10:47.472] Đã nội suy đặc trưng kết hợp
+[2025-03-12 09:10:47.472] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 09:10:47.472] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 09:11:27.961] Lỗi khi xử lý file Tái Sinh.mp3: operands could not be broadcast together with shapes (10565632,) (20637,) 
+[2025-03-12 09:13:18.811] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 36
+[2025-03-12 09:13:18.812] Đang tải file âm thanh...
+[2025-03-12 09:13:23.864] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-12 09:13:23.865] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:13:24.207] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:13:24.659] Đã tính toán Spectral Centroid
+[2025-03-12 09:13:25.563] Đã tính toán Spectral Contrast
+[2025-03-12 09:13:25.897] Đã tính toán Onset Strength
+[2025-03-12 09:13:28.586] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:14:06.488] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:14:06.896] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:14:06.897] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:14:07.346] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:14:07.844] Đã tính toán Spectral Centroid
+[2025-03-12 09:14:08.955] Đã tính toán Spectral Contrast
+[2025-03-12 09:14:10.177] Đã tính toán Onset Strength
+[2025-03-12 09:14:12.378] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:14:36.401] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:14:36.724] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:14:36.726] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 09:14:36.726] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 09:14:36.861] Đã nội suy đặc trưng kết hợp
+[2025-03-12 09:14:36.861] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 09:14:36.861] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 09:15:04.342] Đang tìm 1 đoạn main và 1 đoạn chorus...
+[2025-03-12 09:15:04.618] Lỗi khi xử lý file Tái Sinh.mp3: name 'chorus_segments' is not defined
+[2025-03-12 09:16:32.174] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 37
+[2025-03-12 09:16:32.175] Đang tải file âm thanh...
+[2025-03-12 09:16:34.117] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-12 09:16:34.117] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:16:34.554] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:16:34.984] Đã tính toán Spectral Centroid
+[2025-03-12 09:16:36.135] Đã tính toán Spectral Contrast
+[2025-03-12 09:16:36.417] Đã tính toán Onset Strength
+[2025-03-12 09:16:39.038] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:17:03.211] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:17:03.495] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:17:03.495] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:17:03.976] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:17:04.465] Đã tính toán Spectral Centroid
+[2025-03-12 09:17:05.445] Đã tính toán Spectral Contrast
+[2025-03-12 09:17:05.772] Đã tính toán Onset Strength
+[2025-03-12 09:17:07.819] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:17:29.847] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:17:30.145] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:17:30.147] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 09:17:30.147] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 09:17:30.243] Đã nội suy đặc trưng kết hợp
+[2025-03-12 09:17:30.243] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 09:17:30.243] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 09:17:53.514] Đang tìm 1 đoạn main và 1 đoạn chorus...
+[2025-03-12 09:17:53.514] Lỗi khi xử lý file Tái Sinh.mp3: name 'chorus_segments' is not defined
+[2025-03-12 09:19:22.987] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 38
+[2025-03-12 09:19:23.018] Đang tải file âm thanh...
+[2025-03-12 09:19:24.303] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-12 09:19:24.303] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:19:24.581] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:19:25.141] Đã tính toán Spectral Centroid
+[2025-03-12 09:19:26.322] Đã tính toán Spectral Contrast
+[2025-03-12 09:19:26.601] Đã tính toán Onset Strength
+[2025-03-12 09:19:29.639] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:19:53.659] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:19:53.940] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:19:53.942] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:19:54.291] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:19:54.738] Đã tính toán Spectral Centroid
+[2025-03-12 09:19:56.352] Đã tính toán Spectral Contrast
+[2025-03-12 09:19:56.634] Đã tính toán Onset Strength
+[2025-03-12 09:19:58.474] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:20:20.968] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:20:21.234] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:20:21.235] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 09:20:21.235] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 09:20:21.342] Đã nội suy đặc trưng kết hợp
+[2025-03-12 09:20:21.343] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 09:20:21.343] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 09:20:48.628] Đã thêm đoạn chorus 1 tại 0.00s
+[2025-03-12 09:20:48.630] Đã chọn tổng cộng 1 đoạn highlight (main: 0, chorus: 1)
+[2025-03-12 09:20:48.630] Đang xuất các đoạn highlight...
+[2025-03-12 09:20:48.631] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-12 09:20:49.291] Đã xuất highlight 1 tại 0.00s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh chorus 1.mp3
+[2025-03-12 09:20:49.292] Lỗi khi xử lý file Tái Sinh.mp3: save_highlight() takes 5 positional arguments but 6 were given
+[2025-03-12 09:22:14.711] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 39
+[2025-03-12 09:22:14.714] Đang tải file âm thanh...
+[2025-03-12 09:22:16.030] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-12 09:22:16.030] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:22:16.306] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:22:16.817] Đã tính toán Spectral Centroid
+[2025-03-12 09:22:17.726] Đã tính toán Spectral Contrast
+[2025-03-12 09:22:18.034] Đã tính toán Onset Strength
+[2025-03-12 09:22:20.544] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:22:44.478] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:22:44.797] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:22:44.797] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:22:45.215] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:22:45.682] Đã tính toán Spectral Centroid
+[2025-03-12 09:22:46.804] Đã tính toán Spectral Contrast
+[2025-03-12 09:22:47.085] Đã tính toán Onset Strength
+[2025-03-12 09:22:48.622] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:23:25.793] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:23:26.226] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:23:26.227] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 09:23:26.227] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 09:23:26.351] Đã nội suy đặc trưng kết hợp
+[2025-03-12 09:23:26.351] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 09:23:26.351] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 09:24:04.739] Đã thêm đoạn chorus 1 tại 0.00s
+[2025-03-12 09:24:04.755] Đã chọn tổng cộng 1 đoạn highlight (main: 0, chorus: 1)
+[2025-03-12 09:24:04.757] Đang xuất các đoạn highlight...
+[2025-03-12 09:24:04.780] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-12 09:24:06.728] Đã xuất highlight 1 tại 0.00s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh chorus 1.mp3
+[2025-03-12 09:24:06.818] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 39
+[2025-03-12 09:28:12.274] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 40
+[2025-03-12 09:28:12.276] Đang tải file âm thanh...
+[2025-03-12 09:28:13.930] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-12 09:28:13.931] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:28:14.283] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:28:15.105] Đã tính toán Spectral Centroid
+[2025-03-12 09:28:16.030] Đã tính toán Spectral Contrast
+[2025-03-12 09:28:16.329] Đã tính toán Onset Strength
+[2025-03-12 09:28:19.732] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:28:41.937] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:28:42.216] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:28:42.217] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:28:42.544] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:28:42.976] Đã tính toán Spectral Centroid
+[2025-03-12 09:28:43.877] Đã tính toán Spectral Contrast
+[2025-03-12 09:28:44.263] Đã tính toán Onset Strength
+[2025-03-12 09:28:45.776] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:29:09.812] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:29:10.545] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:29:10.549] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 09:29:10.549] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 09:29:10.732] Đã nội suy đặc trưng kết hợp
+[2025-03-12 09:29:10.732] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 09:29:10.732] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 09:29:42.906] Sẽ tạo 1 đoạn main và 1 đoạn chorus (tổng 2 đoạn)
+[2025-03-12 09:29:43.161] Đã nội suy chorus_scores từ 20637 lên 10565632
+[2025-03-12 09:29:45.502] Lỗi khi xử lý file Tái Sinh.mp3: name 'peak_samples' is not defined
+[2025-03-12 09:31:30.001] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 41
+[2025-03-12 09:31:30.004] Đang tải file âm thanh...
+[2025-03-12 09:31:32.471] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-12 09:31:32.471] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:31:32.777] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:31:33.184] Đã tính toán Spectral Centroid
+[2025-03-12 09:31:34.583] Đã tính toán Spectral Contrast
+[2025-03-12 09:31:35.504] Đã tính toán Onset Strength
+[2025-03-12 09:31:40.692] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:32:13.392] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:32:13.937] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:32:13.938] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:32:14.248] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:32:14.738] Đã tính toán Spectral Centroid
+[2025-03-12 09:32:16.117] Đã tính toán Spectral Contrast
+[2025-03-12 09:32:16.455] Đã tính toán Onset Strength
+[2025-03-12 09:32:18.373] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:32:42.988] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:32:43.283] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:32:43.288] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 09:32:43.288] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 09:32:43.382] Đã nội suy đặc trưng kết hợp
+[2025-03-12 09:32:43.382] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 09:32:43.382] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 09:33:18.795] Sẽ tạo 1 đoạn main và 1 đoạn chorus (tổng 2 đoạn)
+[2025-03-12 09:33:19.361] Đã nội suy chorus_scores từ 20637 lên 10565632
+[2025-03-12 09:33:22.228] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-12 09:33:22.228] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-12 09:33:25.113] Đã chọn đoạn main tại 123.10s với điểm số 0.2190
+[2025-03-12 09:33:28.087] Đã thêm đoạn chorus tại 0.00s với điểm số 0.2388
+[2025-03-12 09:33:28.088] Đã chọn tổng cộng 2 đoạn highlight: 1 main, 1 chorus
+[2025-03-12 09:33:28.088] Đang xuất các đoạn highlight...
+[2025-03-12 09:33:28.089] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-12 09:33:28.691] Đã xuất highlight 1 tại 0.00s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh chorus 1.mp3
+[2025-03-12 09:33:29.208] Đã xuất highlight 2 tại 123.10s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh main 2.mp3
+[2025-03-12 09:33:29.210] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 41
+[2025-03-12 09:36:43.969] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 42
+[2025-03-12 09:36:43.970] Đang tải file âm thanh...
+[2025-03-12 09:36:45.365] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-12 09:36:45.365] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:36:45.747] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:36:46.181] Đã tính toán Spectral Centroid
+[2025-03-12 09:36:47.196] Đã tính toán Spectral Contrast
+[2025-03-12 09:36:47.514] Đã tính toán Onset Strength
+[2025-03-12 09:36:51.065] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:37:13.745] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:37:14.117] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:37:14.118] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:37:14.456] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:37:14.900] Đã tính toán Spectral Centroid
+[2025-03-12 09:37:15.859] Đã tính toán Spectral Contrast
+[2025-03-12 09:37:16.118] Đã tính toán Onset Strength
+[2025-03-12 09:37:18.245] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:37:46.753] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:37:47.252] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:37:47.254] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 09:37:47.259] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 09:37:47.395] Đã nội suy đặc trưng kết hợp
+[2025-03-12 09:37:47.396] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 09:37:47.396] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 09:38:14.489] Sẽ tạo 1 đoạn main và 1 đoạn chorus (tổng 2 đoạn)
+[2025-03-12 09:38:14.726] Đã nội suy chorus_scores từ 20637 lên 10565632
+[2025-03-12 09:38:16.991] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-12 09:38:16.992] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-12 09:38:21.584] Đã chọn đoạn main tại 123.10s với điểm số 0.2190
+[2025-03-12 09:38:21.585] Chưa đủ số chorus (0/1), tìm thêm từ danh sách scores
+[2025-03-12 09:38:25.769] Đã thêm đoạn chorus bổ sung tại 36.87s
+[2025-03-12 09:38:25.770] Đã chọn tổng cộng 2 đoạn highlight: 1 main, 1 chorus
+[2025-03-12 09:38:25.770] Đang xuất các đoạn highlight...
+[2025-03-12 09:38:25.770] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-12 09:38:26.347] Đã xuất highlight 1 tại 36.87s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh chorus 1.mp3
+[2025-03-12 09:38:26.839] Đã xuất highlight 2 tại 123.10s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh main 2.mp3
+[2025-03-12 09:38:26.842] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 42
+[2025-03-12 09:40:52.319] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 43
+[2025-03-12 09:40:52.322] Đang tải file âm thanh...
+[2025-03-12 09:40:53.507] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-12 09:40:53.508] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:40:53.768] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:40:54.252] Đã tính toán Spectral Centroid
+[2025-03-12 09:40:55.189] Đã tính toán Spectral Contrast
+[2025-03-12 09:40:55.514] Đã tính toán Onset Strength
+[2025-03-12 09:40:58.978] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:41:27.009] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:41:27.381] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:41:27.382] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:41:27.770] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:41:28.219] Đã tính toán Spectral Centroid
+[2025-03-12 09:41:29.154] Đã tính toán Spectral Contrast
+[2025-03-12 09:41:29.460] Đã tính toán Onset Strength
+[2025-03-12 09:41:31.148] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:41:58.162] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:41:58.714] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:41:58.716] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 09:41:58.716] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 09:41:58.857] Đã nội suy đặc trưng kết hợp
+[2025-03-12 09:41:58.857] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 09:41:58.857] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 09:42:43.454] Sẽ tạo 1 đoạn main và 1 đoạn chorus (tổng 2 đoạn)
+[2025-03-12 09:42:44.282] Đã nội suy chorus_scores từ 20637 lên 10565632
+[2025-03-12 09:42:46.518] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-12 09:42:46.518] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-12 09:42:50.511] Đã chọn đoạn main tại 123.10s với điểm số 0.2190
+[2025-03-12 09:42:50.512] Chưa đủ số chorus (0/1), tìm thêm từ danh sách scores
+[2025-03-12 09:42:54.607] Đã thêm đoạn chorus bổ sung tại 8.03s
+[2025-03-12 09:42:54.609] Đã chọn tổng cộng 2 đoạn highlight: 1 main, 1 chorus
+[2025-03-12 09:42:54.609] Đang xuất các đoạn highlight...
+[2025-03-12 09:42:54.622] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-12 09:42:55.512] Đã xuất highlight 1 tại 8.03s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh chorus 1.mp3
+[2025-03-12 09:42:56.101] Đã xuất highlight 2 tại 123.10s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh main 2.mp3
+[2025-03-12 09:42:56.103] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 43
+[2025-03-12 09:47:02.367] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 45
+[2025-03-12 09:47:02.368] Đang tải file âm thanh...
+[2025-03-12 09:47:04.377] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-12 09:47:04.377] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:47:04.716] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:47:05.158] Đã tính toán Spectral Centroid
+[2025-03-12 09:47:06.186] Đã tính toán Spectral Contrast
+[2025-03-12 09:47:06.457] Đã tính toán Onset Strength
+[2025-03-12 09:47:09.148] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:47:37.941] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:47:38.272] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:47:38.273] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:47:38.642] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:47:39.118] Đã tính toán Spectral Centroid
+[2025-03-12 09:47:40.109] Đã tính toán Spectral Contrast
+[2025-03-12 09:47:40.405] Đã tính toán Onset Strength
+[2025-03-12 09:47:41.961] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:48:06.328] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:48:06.619] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:48:06.621] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 09:48:06.622] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 09:48:06.732] Đã nội suy đặc trưng kết hợp
+[2025-03-12 09:48:06.733] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 09:48:06.733] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 09:48:32.534] Sẽ tạo 1 đoạn main và 1 đoạn chorus (tổng 2 đoạn)
+[2025-03-12 09:48:32.798] Đã nội suy chorus_scores từ 20637 lên 10565632
+[2025-03-12 09:48:34.994] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-12 09:48:34.995] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-12 09:48:38.996] Đã chọn đoạn main tại 123.60s với điểm số 0.2190
+[2025-03-12 09:48:38.997] Chưa đủ số chorus (0/1), tìm thêm từ danh sách scores
+[2025-03-12 09:48:42.770] Đã thêm đoạn chorus bổ sung tại 10.20s
+[2025-03-12 09:48:42.770] Đã chọn tổng cộng 2 đoạn highlight: 1 main, 1 chorus
+[2025-03-12 09:48:42.770] Đang xuất các đoạn highlight...
+[2025-03-12 09:48:42.771] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-12 09:48:43.246] Xuất chorus từ 10.20s, độ dài 45.00s
+[2025-03-12 09:48:43.288] Sau khi chuyển đổi: độ dài = 45.00s
+[2025-03-12 09:48:43.393] Đã xuất highlight 1 (chorus) tại 10.20s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh chorus 1.mp3, độ dài cuối: 45.00s
+[2025-03-12 09:48:43.836] Xuất main từ 123.60s, độ dài 45.00s
+[2025-03-12 09:48:43.877] Sau khi chuyển đổi: độ dài = 45.00s
+[2025-03-12 09:48:43.975] Đã xuất highlight 2 (main) tại 123.60s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh main 2.mp3, độ dài cuối: 45.00s
+[2025-03-12 09:48:43.977] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 45
+[2025-03-12 09:55:31.614] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 47
+[2025-03-12 09:55:31.616] Đang tải file âm thanh...
+[2025-03-12 09:55:32.927] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-12 09:55:32.927] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:55:33.230] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:55:33.738] Đã tính toán Spectral Centroid
+[2025-03-12 09:55:34.640] Đã tính toán Spectral Contrast
+[2025-03-12 09:55:35.534] Đã tính toán Onset Strength
+[2025-03-12 09:55:38.524] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:56:05.201] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:56:05.517] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:56:05.518] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:56:06.043] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 09:56:06.549] Đã tính toán Spectral Centroid
+[2025-03-12 09:56:07.632] Đã tính toán Spectral Contrast
+[2025-03-12 09:56:07.941] Đã tính toán Onset Strength
+[2025-03-12 09:56:09.865] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 09:56:36.297] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:56:36.627] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:56:36.628] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 09:56:36.628] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 09:56:36.771] Đã nội suy đặc trưng kết hợp
+[2025-03-12 09:56:36.772] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 09:56:36.772] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 09:57:01.685] Sẽ tạo 1 đoạn main và 1 đoạn chorus (tổng 2 đoạn)
+[2025-03-12 09:57:02.075] Đã nội suy chorus_scores từ 20637 lên 10565632
+[2025-03-12 09:57:05.129] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-12 09:57:05.130] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-12 09:57:09.898] MAIN (thay thế): Đã chọn đoạn tại 123.60s với điểm số 0.2190
+[2025-03-12 09:57:09.944] Chưa đủ số chorus (0/1), tìm thêm từ danh sách scores
+[2025-03-12 09:57:14.403] Đã thêm đoạn chorus bổ sung tại 10.20s
+[2025-03-12 09:57:14.404] Đã chọn tổng cộng 2 đoạn highlight: 1 main, 1 chorus
+[2025-03-12 09:57:14.410] Đang xuất các đoạn highlight...
+[2025-03-12 09:57:14.466] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-12 09:57:14.983] Xuất chorus từ 10.20s, độ dài 45.00s
+[2025-03-12 09:57:15.040] Sau khi chuyển đổi: độ dài = 45.00s
+[2025-03-12 09:57:15.149] Đã xuất highlight 1 (chorus) tại 10.20s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh chorus 1.mp3, độ dài cuối: 45.00s
+[2025-03-12 09:57:15.555] Xuất main từ 123.60s, độ dài 45.00s
+[2025-03-12 09:57:15.603] Sau khi chuyển đổi: độ dài = 45.00s
+[2025-03-12 09:57:15.716] Đã xuất highlight 2 (main) tại 123.60s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh main 2.mp3, độ dài cuối: 45.00s
+[2025-03-12 09:57:15.718] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 47
+[2025-03-12 10:16:57.104] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 50
+[2025-03-12 10:16:57.107] Đang tải file âm thanh...
+[2025-03-12 10:16:57.425] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-12 10:16:57.426] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 10:16:57.766] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 10:16:58.591] Đã tính toán Spectral Centroid
+[2025-03-12 10:16:59.669] Đã tính toán Spectral Contrast
+[2025-03-12 10:17:00.000] Đã tính toán Onset Strength
+[2025-03-12 10:17:01.896] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 10:17:29.716] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 10:17:30.470] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 10:17:30.470] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 10:17:30.833] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 10:17:31.266] Đã tính toán Spectral Centroid
+[2025-03-12 10:17:32.403] Đã tính toán Spectral Contrast
+[2025-03-12 10:17:32.912] Đã tính toán Onset Strength
+[2025-03-12 10:17:35.146] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 10:18:07.617] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 10:18:08.016] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 10:18:08.017] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 10:18:08.026] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 10:18:08.159] Đã nội suy đặc trưng kết hợp
+[2025-03-12 10:18:08.159] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 10:18:08.159] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 10:18:32.636] Sẽ tạo 1 đoạn main và 1 đoạn chorus (tổng 2 đoạn)
+[2025-03-12 10:18:32.895] Đã nội suy chorus_scores từ 20637 lên 10565632
+[2025-03-12 10:18:35.185] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-12 10:18:35.185] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-12 10:18:42.258] MAIN (thay thế): Đã chọn đoạn tại 124.56s với điểm số 0.2190
+[2025-03-12 10:18:42.259] Chưa đủ số chorus (0/1), tìm thêm từ danh sách scores
+[2025-03-12 10:18:59.257] Đã thêm đoạn chorus bổ sung tại 19.03s
+[2025-03-12 10:18:59.258] Đã chọn tổng cộng 2 đoạn highlight: 1 main, 1 chorus
+[2025-03-12 10:18:59.258] Đang xuất các đoạn highlight...
+[2025-03-12 10:18:59.259] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-12 10:18:59.782] Xuất chorus từ 19.03s, độ dài 45.00s
+[2025-03-12 10:18:59.826] Sau khi chuyển đổi: độ dài = 45.00s
+[2025-03-12 10:18:59.935] Đã xuất highlight 1 (chorus) tại 19.03s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh chorus 1.mp3, độ dài cuối: 45.00s
+[2025-03-12 10:19:00.296] Xuất main từ 124.56s, độ dài 45.00s
+[2025-03-12 10:19:00.345] Sau khi chuyển đổi: độ dài = 45.00s
+[2025-03-12 10:19:00.445] Đã xuất highlight 2 (main) tại 124.56s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh main 2.mp3, độ dài cuối: 45.00s
+[2025-03-12 10:19:00.449] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 50
+[2025-03-12 15:49:59.593] Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 51
+[2025-03-12 15:49:59.595] Đang tải file âm thanh...
+[2025-03-12 15:50:00.571] Đã tải file âm thanh: 239.58 giây, sample rate: 44100Hz
+[2025-03-12 15:50:00.572] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 15:50:00.933] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 15:50:01.351] Đã tính toán Spectral Centroid
+[2025-03-12 15:50:02.246] Đã tính toán Spectral Contrast
+[2025-03-12 15:50:02.545] Đã tính toán Onset Strength
+[2025-03-12 15:50:05.578] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 15:50:29.209] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 15:50:29.490] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 15:50:29.491] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 15:50:29.853] Đã tính toán RMS: min=0.0000, max=0.5521, mean=0.1959
+[2025-03-12 15:50:30.225] Đã tính toán Spectral Centroid
+[2025-03-12 15:50:31.162] Đã tính toán Spectral Contrast
+[2025-03-12 15:50:31.461] Đã tính toán Onset Strength
+[2025-03-12 15:50:32.870] Đã tính toán Tempo (90.67 BPM) và Beat Strength
+[2025-03-12 15:50:53.837] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 15:50:54.116] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 15:50:54.120] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 15:50:54.120] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 15:50:54.231] Đã nội suy đặc trưng kết hợp
+[2025-03-12 15:50:54.231] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 15:50:54.231] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 15:51:15.466] Sẽ tạo 1 đoạn main và 1 đoạn chorus (tổng 2 đoạn)
+[2025-03-12 15:51:15.627] Đã nội suy chorus_scores từ 20637 lên 10565632
+[2025-03-12 15:51:17.499] Đã phát hiện 1802 cao trào tiềm năng
+[2025-03-12 15:51:17.499] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-12 15:51:23.261] MAIN (thay thế): Đã chọn đoạn tại 124.56s với điểm số 0.2190
+[2025-03-12 15:51:23.263] Chưa đủ số chorus (0/1), tìm thêm từ danh sách scores
+[2025-03-12 15:51:35.592] Đã thêm đoạn chorus bổ sung tại 19.03s
+[2025-03-12 15:51:35.592] Đã chọn tổng cộng 2 đoạn highlight: 1 main, 1 chorus
+[2025-03-12 15:51:35.592] Đang xuất các đoạn highlight...
+[2025-03-12 15:51:35.593] Đã chuyển đổi tên file có dấu 'Tái Sinh' thành 'Tai Sinh'
+[2025-03-12 15:51:36.052] Xuất chorus từ 19.03s, độ dài 45.00s
+[2025-03-12 15:51:36.094] Sau khi chuyển đổi: độ dài = 45.00s
+[2025-03-12 15:51:36.204] Đã xuất highlight 1 (chorus) tại 19.03s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh chorus 1.mp3, độ dài cuối: 45.00s
+[2025-03-12 15:51:36.561] Xuất main từ 124.56s, độ dài 45.00s
+[2025-03-12 15:51:36.605] Sau khi chuyển đổi: độ dài = 45.00s
+[2025-03-12 15:51:36.712] Đã xuất highlight 2 (main) tại 124.56s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/Tai Sinh main 2.mp3, độ dài cuối: 45.00s
+[2025-03-12 15:51:36.714] Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 51

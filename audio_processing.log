@@ -1,0 +1,266 @@
+2025-03-07 14:18:01,170 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 1
+2025-03-07 14:18:44,692 - audio_processor - ERROR - Lỗi khi xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3: Encoding failed. ffmpeg/avlib returned error code: 8
+
+Command:['ffmpeg', '-y', '-f', 'wav', '-i', '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpqbvdyys_', '-acodec', 'alaw', '-b:a', '64k', '-f', 'wav', '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmputd3jo46']
+
+Output from ffmpeg/avlib:
+
+ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.4)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/7.1_4 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[aist#0:0/pcm_s16le @ 0x13e006900] Guessed Channel Layout: mono
+Input #0, wav, from '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpqbvdyys_':
+  Duration: 00:00:50.00, bitrate: 128 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 8000 Hz, mono, s16, 128 kb/s
+[aost#0:0 @ 0x13e00a0f0] Unknown encoder 'alaw'
+[aost#0:0 @ 0x13e00a0f0] Error selecting an encoder
+Error opening output file /var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmputd3jo46.
+Error opening output files: Encoder not found
+Traceback (most recent call last):
+  File "/Users/accompany/Documents/chunmani-assistant/audio/audio_api.py", line 367, in process_audio_file
+    highlight_audio.export(
+  File "/opt/homebrew/anaconda3/lib/python3.12/site-packages/pydub/audio_segment.py", line 970, in export
+    raise CouldntEncodeError(
+pydub.exceptions.CouldntEncodeError: Encoding failed. ffmpeg/avlib returned error code: 8
+
+Command:['ffmpeg', '-y', '-f', 'wav', '-i', '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpqbvdyys_', '-acodec', 'alaw', '-b:a', '64k', '-f', 'wav', '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmputd3jo46']
+
+Output from ffmpeg/avlib:
+
+ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.4)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/7.1_4 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[aist#0:0/pcm_s16le @ 0x13e006900] Guessed Channel Layout: mono
+Input #0, wav, from '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpqbvdyys_':
+  Duration: 00:00:50.00, bitrate: 128 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 8000 Hz, mono, s16, 128 kb/s
+[aost#0:0 @ 0x13e00a0f0] Unknown encoder 'alaw'
+[aost#0:0 @ 0x13e00a0f0] Error selecting an encoder
+Error opening output file /var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmputd3jo46.
+Error opening output files: Encoder not found
+
+2025-03-07 14:20:43,080 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 2
+2025-03-07 14:21:28,631 - audio_processor - ERROR - Lỗi khi xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3: Encoding failed. ffmpeg/avlib returned error code: 8
+
+Command:['ffmpeg', '-y', '-f', 'wav', '-i', '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpg6e4t5qt', '-acodec', 'alaw', '-b:a', '64k', '-f', 'wav', '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpv9t1m014']
+
+Output from ffmpeg/avlib:
+
+ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.4)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/7.1_4 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[aist#0:0/pcm_s16le @ 0x15770a5f0] Guessed Channel Layout: mono
+Input #0, wav, from '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpg6e4t5qt':
+  Duration: 00:00:50.00, bitrate: 128 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 8000 Hz, mono, s16, 128 kb/s
+[aost#0:0 @ 0x15770ad50] Unknown encoder 'alaw'
+[aost#0:0 @ 0x15770ad50] Error selecting an encoder
+Error opening output file /var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpv9t1m014.
+Error opening output files: Encoder not found
+Traceback (most recent call last):
+  File "/Users/accompany/Documents/chunmani-assistant/audio/audio_api.py", line 367, in process_audio_file
+    highlight_audio.export(
+  File "/opt/homebrew/anaconda3/lib/python3.12/site-packages/pydub/audio_segment.py", line 970, in export
+    raise CouldntEncodeError(
+pydub.exceptions.CouldntEncodeError: Encoding failed. ffmpeg/avlib returned error code: 8
+
+Command:['ffmpeg', '-y', '-f', 'wav', '-i', '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpg6e4t5qt', '-acodec', 'alaw', '-b:a', '64k', '-f', 'wav', '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpv9t1m014']
+
+Output from ffmpeg/avlib:
+
+ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.4)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/7.1_4 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[aist#0:0/pcm_s16le @ 0x15770a5f0] Guessed Channel Layout: mono
+Input #0, wav, from '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpg6e4t5qt':
+  Duration: 00:00:50.00, bitrate: 128 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 8000 Hz, mono, s16, 128 kb/s
+[aost#0:0 @ 0x15770ad50] Unknown encoder 'alaw'
+[aost#0:0 @ 0x15770ad50] Error selecting an encoder
+Error opening output file /var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpv9t1m014.
+Error opening output files: Encoder not found
+
+2025-03-07 14:24:16,774 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 3
+2025-03-07 14:24:59,203 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 3
+2025-03-07 14:27:03,090 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 4
+2025-03-07 14:27:46,917 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 4
+2025-03-07 14:31:08,989 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 5
+2025-03-07 14:31:19,922 - audio_processor - ERROR - Lỗi khi xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3: unsupported format string passed to numpy.ndarray.__format__
+Traceback (most recent call last):
+  File "/Users/accompany/Documents/chunmani-assistant/audio/audio_api.py", line 200, in process_audio_file
+    write_log(file_name, f"Đã tính toán Tempo ({tempo:.2f} BPM) và Beat Strength")
+                                               ^^^^^^^^^^^
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2025-03-07 14:32:04,375 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 6
+2025-03-07 14:32:10,534 - audio_processor - ERROR - Lỗi khi xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3: unsupported format string passed to numpy.ndarray.__format__
+Traceback (most recent call last):
+  File "/Users/accompany/Documents/chunmani-assistant/audio/audio_api.py", line 202, in process_audio_file
+    write_log(file_name, f"Đã tính toán Tempo ({tempo:.2f} BPM) và Beat Strength")
+                                               ^^^^^^^^^^^
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2025-03-07 14:33:45,208 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 7
+2025-03-07 14:33:51,769 - audio_processor - ERROR - Lỗi khi xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3: unsupported format string passed to numpy.ndarray.__format__
+Traceback (most recent call last):
+  File "/Users/accompany/Documents/chunmani-assistant/audio/audio_api.py", line 202, in process_audio_file
+    write_log(file_name, f"Đã tính toán Tempo ({tempo:.2f} BPM) và Beat Strength")
+                                               ^^^^^^^^^^^
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2025-03-07 14:35:07,877 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 8
+2025-03-07 14:35:14,452 - audio_processor - ERROR - Lỗi khi xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3: unsupported format string passed to numpy.ndarray.__format__
+Traceback (most recent call last):
+  File "/Users/accompany/Documents/chunmani-assistant/audio/audio_api.py", line 202, in process_audio_file
+    write_log(file_name, f"Đã tính toán Tempo ({tempo:.2f} BPM) và Beat Strength")
+                                               ^^^^^^^^^^^
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2025-03-07 14:36:30,201 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 9
+2025-03-07 14:37:53,624 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 9
+2025-03-07 14:49:36,536 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 10
+2025-03-07 14:50:55,324 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 10
+2025-03-07 14:52:50,744 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 11
+2025-03-07 14:54:22,799 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 11
+2025-03-07 14:54:34,344 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 12
+2025-03-07 14:55:46,343 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 12
+2025-03-07 15:00:58,200 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 13
+2025-03-07 15:02:12,006 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 13
+2025-03-07 15:06:03,317 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 14
+2025-03-07 15:07:25,678 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 14
+2025-03-07 15:10:22,108 - audio_processor - INFO - Bắt đầu xử lý file KHOÁ LY BIỆT ｜ KARAOKE BEAT GỐC ｜ VOI BẢN ĐÔN.mp3 - Job ID: 15
+2025-03-07 15:12:31,778 - audio_processor - INFO - Hoàn thành xử lý file KHOÁ LY BIỆT ｜ KARAOKE BEAT GỐC ｜ VOI BẢN ĐÔN.mp3 - Job ID: 15
+2025-03-07 15:13:21,403 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 16
+2025-03-07 15:14:54,429 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 16
+2025-03-07 15:23:19,709 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 17
+2025-03-07 15:24:31,409 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 17
+2025-03-07 15:28:22,218 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 18
+2025-03-07 15:29:23,116 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 18
+2025-03-07 15:58:13,196 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 19
+2025-03-07 15:59:31,344 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 19
+2025-03-07 16:02:03,104 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 20
+2025-03-07 16:03:12,023 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 20
+2025-03-07 16:03:14,200 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 21
+2025-03-07 16:04:24,125 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 21
+2025-03-07 16:06:24,430 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 23
+2025-03-07 16:07:47,137 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 24
+2025-03-07 16:09:02,556 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 24
+2025-03-07 16:09:03,474 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 25
+2025-03-07 16:10:13,746 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 25
+2025-03-07 16:12:13,269 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 26
+2025-03-07 16:13:23,134 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 26
+2025-03-07 16:18:42,964 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 27
+2025-03-07 16:19:54,474 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 27
+2025-03-07 16:22:43,946 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 28
+2025-03-07 16:23:59,410 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 28
+2025-03-07 16:30:12,543 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 29
+2025-03-07 16:31:28,646 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 29
+2025-03-07 16:35:51,748 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 30
+2025-03-07 16:37:02,845 - audio_processor - ERROR - Lỗi khi xử lý file Tái Sinh.mp3: name 'has_vocal' is not defined
+Traceback (most recent call last):
+  File "/Users/accompany/Documents/chunmani-assistant/audio/audio_api.py", line 569, in process_audio_file
+    instrumental_duration = detect_instrumental_intro(adjusted_start, y, sr)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/accompany/Documents/chunmani-assistant/audio/audio_api.py", line 442, in detect_instrumental_intro
+    if has_vocal:
+       ^^^^^^^^^
+NameError: name 'has_vocal' is not defined
+2025-03-07 16:44:38,551 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 31
+2025-03-07 16:45:50,538 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 31
+2025-03-12 09:00:00,155 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 33
+2025-03-12 09:01:54,511 - audio_processor - ERROR - Lỗi khi xử lý file Tái Sinh.mp3: name 'os' is not defined
+Traceback (most recent call last):
+  File "/Users/accompany/Documents/chunmani-assistant/audio/utils_audio.py", line 712, in process_audio_file
+    base_filename = os.path.splitext(os.path.basename(file_name))[0]
+                    ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'
+2025-03-12 09:03:33,221 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 34
+2025-03-12 09:05:36,014 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 34
+2025-03-12 09:09:27,685 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 35
+2025-03-12 09:11:27,964 - audio_processor - ERROR - Lỗi khi xử lý file Tái Sinh.mp3: operands could not be broadcast together with shapes (10565632,) (20637,) 
+Traceback (most recent call last):
+  File "/Users/accompany/Documents/chunmani-assistant/audio/utils_audio.py", line 429, in process_audio_file
+    combined_score = combined_feature * 0.7 + chorus_scores[:len(combined_feature)] * 0.3
+                     ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ValueError: operands could not be broadcast together with shapes (10565632,) (20637,) 
+2025-03-12 09:13:18,812 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 36
+2025-03-12 09:15:04,619 - audio_processor - ERROR - Lỗi khi xử lý file Tái Sinh.mp3: name 'chorus_segments' is not defined
+Traceback (most recent call last):
+  File "/Users/accompany/Documents/chunmani-assistant/audio/utils_audio.py", line 438, in process_audio_file
+    while len(chorus_segments) < num_chorus and chorus_attempts < max_chorus_attempts:
+              ^^^^^^^^^^^^^^^
+NameError: name 'chorus_segments' is not defined. Did you mean: 'num_segments'?
+2025-03-12 09:16:32,175 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 37
+2025-03-12 09:17:53,515 - audio_processor - ERROR - Lỗi khi xử lý file Tái Sinh.mp3: name 'chorus_segments' is not defined
+Traceback (most recent call last):
+  File "/Users/accompany/Documents/chunmani-assistant/audio/utils_audio.py", line 438, in process_audio_file
+    while len(chorus_segments) < num_chorus and chorus_attempts < max_chorus_attempts:
+              ^^^^^^^^^^^^^^^
+NameError: name 'chorus_segments' is not defined. Did you mean: 'num_segments'?
+2025-03-12 09:19:22,994 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 38
+2025-03-12 09:20:49,292 - audio_processor - ERROR - Lỗi khi xử lý file Tái Sinh.mp3: save_highlight() takes 5 positional arguments but 6 were given
+Traceback (most recent call last):
+  File "/Users/accompany/Documents/chunmani-assistant/audio/utils_audio.py", line 554, in process_audio_file
+    save_highlight(job_id, idx+1, float(start_time_hl), highlight_output_path, float(score), segment_type)
+TypeError: save_highlight() takes 5 positional arguments but 6 were given
+2025-03-12 09:22:14,713 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 39
+2025-03-12 09:24:06,822 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 39
+2025-03-12 09:28:12,275 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 40
+2025-03-12 09:29:45,503 - audio_processor - ERROR - Lỗi khi xử lý file Tái Sinh.mp3: name 'peak_samples' is not defined
+Traceback (most recent call last):
+  File "/Users/accompany/Documents/chunmani-assistant/audio/utils_audio.py", line 478, in process_audio_file
+    if len(peak_samples) > 0:
+           ^^^^^^^^^^^^
+NameError: name 'peak_samples' is not defined
+2025-03-12 09:31:30,003 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 41
+2025-03-12 09:33:29,210 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 41
+2025-03-12 09:36:43,970 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 42
+2025-03-12 09:38:26,842 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 42
+2025-03-12 09:40:52,320 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 43
+2025-03-12 09:42:56,103 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 43
+2025-03-12 09:43:49,669 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 44
+2025-03-12 09:45:32,018 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 44
+2025-03-12 09:47:02,368 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 45
+2025-03-12 09:48:43,977 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 45
+2025-03-12 09:49:44,381 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 46
+2025-03-12 09:51:41,561 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 46
+2025-03-12 09:55:31,615 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 47
+2025-03-12 09:57:15,718 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 47
+2025-03-12 09:58:22,341 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 48
+2025-03-12 10:00:35,312 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 48
+2025-03-12 10:04:14,128 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 49
+2025-03-12 10:06:22,560 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 49
+2025-03-12 10:16:57,105 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 50
+2025-03-12 10:19:00,449 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 50
+2025-03-12 15:49:59,594 - audio_processor - INFO - Bắt đầu xử lý file Tái Sinh.mp3 - Job ID: 51
+2025-03-12 15:51:36,714 - audio_processor - INFO - Hoàn thành xử lý file Tái Sinh.mp3 - Job ID: 51
+2025-03-12 15:51:36,774 - audio_processor - INFO - Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 52
+2025-03-12 15:53:08,083 - audio_processor - INFO - Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 52

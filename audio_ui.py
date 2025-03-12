@@ -7,6 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import io
 import librosa
+import json
 
 st.set_page_config(page_title="Audio Highlight Extractor", layout="wide")
 
@@ -17,7 +18,7 @@ page = st.sidebar.radio("Chọn chức năng:", ["Xử lý Audio", "Lịch sử 
 if page == "Xử lý Audio":
     st.title("Audio Highlight Extractor")
 
-    uploaded_files = st.file_uploader("Upload your audio files", type=["mp3", "wav"], accept_multiple_files=True)
+    uploaded_files = st.file_uploader("Upload your audio files", type=["mp3", "wav", "flac", "m4a", "aac", "ogg", "wma", "aiff"],, accept_multiple_files=True)
     
     # Display waveform visualization for uploaded files
     if uploaded_files:
@@ -62,7 +63,7 @@ if page == "Xử lý Audio":
                     st.warning(f"Không thể hiển thị waveform cho file {uploaded_file.name}: {str(e)}")
     
     # Adjusted segment_duration slider to match the 40-60 second requirement
-    segment_duration = st.slider("Segment Duration (seconds)", min_value=40.0, max_value=60.0, value=40.0, step=5.0)
+    segment_duration = st.slider("Segment Duration (seconds)", min_value=40.0, max_value=60.0, value=45.0, step=5.0)
 
     # Add this where you're collecting user input parameters
     num_segments = st.number_input(
@@ -79,73 +80,166 @@ if page == "Xử lý Audio":
         process_button = st.button("Bắt đầu xử lý")
         
         if process_button:
-            # Tạo tab cho từng file
-            tabs = st.tabs([file.name for file in uploaded_files])
+            # Thêm option để chọn phương thức xử lý
+            use_batch = st.checkbox("Xử lý đồng thời tất cả file (nhanh hơn)", value=True)
             
-            for i, uploaded_file in enumerate(uploaded_files):
-                with tabs[i]:
-                    with st.spinner(f"Đang xử lý file {uploaded_file.name}..."):
-                        files = {
-                            "audio_file": (uploaded_file.name, uploaded_file.getvalue(), uploaded_file.type)
-                        }
-
-                        # Updated API call to only include segment_duration
-                        response = requests.post(
-                            f"http://127.0.0.1:8000/highlight?segment_duration={segment_duration}&num_segments={num_segments}", 
-                            files=files
+            if use_batch and len(uploaded_files) > 1:
+                # Xử lý tất cả file cùng lúc bằng endpoint highlight_multiple
+                with st.spinner(f"Đang xử lý {len(uploaded_files)} file audio..."):
+                    files = []
+                    for uploaded_file in uploaded_files:
+                        files.append(
+                            ("audio_files", (uploaded_file.name, uploaded_file.getvalue(), uploaded_file.type))
                         )
+                    
+                    response = requests.post(
+                        f"http://127.0.0.1:8000/highlight_multiple?segment_duration={segment_duration}&num_segments={num_segments}", 
+                        files=files
+                    )
+                    
+                    if response.status_code == 200:
+                        results = response.json()["results"]
                         
-                        if response.status_code == 200:
-                            result = response.json()
-                            
-                            # Kiểm tra nếu có lỗi
-                            if "error" in result:
-                                st.error(f"Lỗi: {result['error']}")
-                                if "job_id" in result:
-                                    st.info(f"ID công việc: {result['job_id']} - Bạn có thể kiểm tra chi tiết lỗi trong phần Lịch sử xử lý")
-                                continue
-                            
-                            st.success(f"Found {result['num_segments']} highlight segments")
-                            
-                            # Hiển thị job ID
-                            if "job_id" in result:
-                                st.info(f"ID công việc: {result['job_id']}")
-                            
-                            for j, highlight in enumerate(result['highlights']):
-                                # Add segment type to the subheader if available
-                                segment_type = highlight.get('type', '')
-                                type_label = f" ({segment_type.upper()})" if segment_type else ""
-                                st.subheader(f"Highlight {j+1}{type_label}")
-                                st.info(f"Time: {highlight['highlight_time']} seconds")
+                        # Tạo tab cho từng file
+                        tabs = st.tabs([result["filename"] for result in results])
+                        
+                        for i, result in enumerate(results):
+                            with tabs[i]:
+                                file_result = result["result"]
                                 
-                                # Đọc file highlight từ backend để hiển thị
-                                highlight_file = highlight['highlight_file']
-                                audio_response = requests.get(f"http://127.0.0.1:8000/download_highlight?file_path={highlight_file}")
-                                if audio_response.status_code == 200:
-                                    # Tạo visualizer cho audio highlight
-                                    audio_bytes = audio_response.content
-                                    try:
-                                        # Đọc audio data để tạo visualizer
-                                        audio_data = io.BytesIO(audio_bytes)
-                                        y, sr = librosa.load(audio_data, sr=None)
-                                        
-                                        # Tạo waveform visualization
-                                        fig, ax = plt.subplots(figsize=(10, 2))
-                                        ax.plot(np.linspace(0, len(y)/sr, len(y)), y, color='#1DB954')
-                                        ax.set_xlabel('Time (s)')
-                                        ax.set_ylabel('Amplitude')
-                                        ax.set_title(f'Waveform - Highlight at {highlight["highlight_time"]}s')
-                                        ax.grid(True, alpha=0.3)
-                                        st.pyplot(fig)
-                                    except Exception as e:
-                                        st.warning(f"Không thể tạo visualizer: {str(e)}")
+                                # Kiểm tra nếu có lỗi
+                                if "error" in file_result:
+                                    st.error(f"Lỗi: {file_result['error']}")
+                                    if "job_id" in file_result:
+                                        st.info(f"ID công việc: {file_result['job_id']} - Bạn có thể kiểm tra chi tiết lỗi trong phần Lịch sử xử lý")
+                                    continue
+                                
+                                st.success(f"Found {file_result['num_segments']} highlight segments")
+                                
+                                # Hiển thị job ID
+                                if "job_id" in file_result:
+                                    st.info(f"ID công việc: {file_result['job_id']}")
+                                
+                                for j, highlight in enumerate(file_result['highlights']):
+                                    # Add segment type to the subheader if available
+                                    segment_type = highlight.get('type', '')
+                                    type_label = f" ({segment_type.upper()})" if segment_type else ""
+                                    st.subheader(f"Highlight {j+1}{type_label}")
+                                    st.info(f"Time: {highlight['highlight_time']} seconds")
                                     
-                                    # Sử dụng định dạng MP3 cho audio player
-                                    st.audio(audio_bytes, format="audio/mp3")
+                                    # Đọc file highlight từ backend để hiển thị
+                                    highlight_file = highlight['highlight_file']
+                                    audio_response = requests.get(f"http://127.0.0.1:8000/download_highlight?file_path={highlight_file}")
+                                    
+                                    # Hiển thị audio tương tự như xử lý đơn lẻ
+                                    if audio_response.status_code == 200:
+                                        # Tạo visualizer cho audio highlight
+                                        audio_bytes = audio_response.content
+                                        try:
+                                            # Đọc audio data để tạo visualizer
+                                            audio_data = io.BytesIO(audio_bytes)
+                                            y, sr = librosa.load(audio_data, sr=None)
+                                            
+                                            # Tạo waveform visualization
+                                            fig, ax = plt.subplots(figsize=(10, 2))
+                                            ax.plot(np.linspace(0, len(y)/sr, len(y)), y, color='#1DB954')
+                                            ax.set_xlabel('Time (s)')
+                                            ax.set_ylabel('Amplitude')
+                                            ax.set_title(f'Waveform - Highlight at {highlight["highlight_time"]}s')
+                                            ax.grid(True, alpha=0.3)
+                                            st.pyplot(fig)
+                                        except Exception as e:
+                                            st.warning(f"Không thể tạo visualizer: {str(e)}")
+                                        
+                                        # Sử dụng định dạng MP3 cho audio player
+                                        st.audio(audio_bytes, format="audio/mp3")
+                                    else:
+                                        st.error(f"Could not retrieve highlight audio file {j+1}.")
+                    else:
+                        st.error(f"Error processing audio batch: {response.text}")
+            
+            else:
+                # Tạo tab cho từng file
+                tabs = st.tabs([file.name for file in uploaded_files])
+                
+                for i, uploaded_file in enumerate(uploaded_files):
+                    with tabs[i]:
+                        with st.spinner(f"Đang xử lý file {uploaded_file.name}..."):
+                            files = {
+                                "audio_file": (uploaded_file.name, uploaded_file.getvalue(), uploaded_file.type)
+                            }
+
+                            try:
+                                response = requests.post(
+                                    f"http://127.0.0.1:8000/highlight?segment_duration={segment_duration}&num_segments={num_segments}", 
+                                    files=files,
+                                    timeout=300  # 5 minute timeout
+                                )
+                                
+                                if response.status_code == 200:
+                                    result = response.json()
+                                    
+                                    # Kiểm tra nếu có lỗi
+                                    if "error" in result:
+                                        st.error(f"Lỗi: {result['error']}")
+                                        if "job_id" in result:
+                                            st.info(f"ID công việc: {result['job_id']} - Bạn có thể kiểm tra chi tiết lỗi trong phần Lịch sử xử lý")
+                                        continue
+                                    
+                                    st.success(f"Found {result['num_segments']} highlight segments")
+                                    
+                                    # Hiển thị job ID
+                                    if "job_id" in result:
+                                        st.info(f"ID công việc: {result['job_id']}")
+                                    
+                                    for j, highlight in enumerate(result['highlights']):
+                                        # Add segment type to the subheader if available
+                                        segment_type = highlight.get('type', '')
+                                        type_label = f" ({segment_type.upper()})" if segment_type else ""
+                                        st.subheader(f"Highlight {j+1}{type_label}")
+                                        st.info(f"Time: {highlight['highlight_time']} seconds")
+                                        
+                                        # Đọc file highlight từ backend để hiển thị
+                                        highlight_file = highlight['highlight_file']
+                                        audio_response = requests.get(f"http://127.0.0.1:8000/download_highlight?file_path={highlight_file}")
+                                        if audio_response.status_code == 200:
+                                            # Tạo visualizer cho audio highlight
+                                            audio_bytes = audio_response.content
+                                            try:
+                                                # Đọc audio data để tạo visualizer
+                                                audio_data = io.BytesIO(audio_bytes)
+                                                y, sr = librosa.load(audio_data, sr=None)
+                                                
+                                                # Tạo waveform visualization
+                                                fig, ax = plt.subplots(figsize=(10, 2))
+                                                ax.plot(np.linspace(0, len(y)/sr, len(y)), y, color='#1DB954')
+                                                ax.set_xlabel('Time (s)')
+                                                ax.set_ylabel('Amplitude')
+                                                ax.set_title(f'Waveform - Highlight at {highlight["highlight_time"]}s')
+                                                ax.grid(True, alpha=0.3)
+                                                st.pyplot(fig)
+                                            except Exception as e:
+                                                st.warning(f"Không thể tạo visualizer: {str(e)}")
+                                            
+                                            # Sử dụng định dạng MP3 cho audio player
+                                            st.audio(audio_bytes, format="audio/mp3")
+                                        else:
+                                            st.error(f"Could not retrieve highlight audio file {j+1}.")
                                 else:
-                                    st.error(f"Could not retrieve highlight audio file {j+1}.")
-                        else:
-                            st.error(f"Error processing audio: {response.text}")
+                                    try:
+                                        # Try to parse error message as JSON
+                                        error_detail = response.json()
+                                        st.error(f"Error processing audio: {error_detail.get('detail', response.text)}")
+                                    except json.JSONDecodeError:
+                                        # If not JSON, display the raw response
+                                        st.error(f"Error processing audio: {response.text}")
+                                    
+                                    # Add more debug info
+                                    st.info("Debug information: Check the server logs for more details")
+                                    st.code(f"Status code: {response.status_code}\nRequest URL: {response.url}")
+                            except requests.exceptions.RequestException as e:
+                                st.error(f"Lỗi kết nối đến server: {str(e)}")
+                                st.info("Vui lòng kiểm tra xem server API đã khởi động chưa hoặc có lỗi trong quá trình xử lý")
 
 elif page == "Lịch sử xử lý":
     st.title("Lịch sử xử lý Audio")

@@ -1,0 +1,737 @@
+[2025-03-07 14:18:01] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 1
+[2025-03-07 14:18:01] Đang tải file âm thanh...
+[2025-03-07 14:18:04] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 14:18:04] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 14:18:04] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 14:18:05] Đã tính toán Spectral Centroid
+[2025-03-07 14:18:06] Đã tính toán Spectral Contrast
+[2025-03-07 14:18:06] Đã tính toán Onset Strength
+[2025-03-07 14:18:06] Đã kết hợp các đặc trưng
+[2025-03-07 14:18:06] Thiết lập cửa sổ trượt: frame_length=2205000, hop_length=22050
+[2025-03-07 14:18:06] Đã nội suy đặc trưng kết hợp
+[2025-03-07 14:18:06] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 14:18:06] Đã tính toán điểm số cho 362 đoạn
+[2025-03-07 14:18:06] Đang phân tích cấu trúc bài hát...
+[2025-03-07 14:18:07] Đang tính ma trận tự tương quan...
+[2025-03-07 14:18:31] Đang phân đoạn bài hát...
+[2025-03-07 14:18:43] Đã phân đoạn bài hát thành 22 đoạn
+[2025-03-07 14:18:43] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 14:18:43] Đang chọn các đoạn highlight...
+[2025-03-07 14:18:43] Đã chọn đoạn highlight tại 100.50s với điểm số 0.2276
+[2025-03-07 14:18:44] Đã chọn đoạn highlight tại 0.50s với điểm số 0.0479
+[2025-03-07 14:18:44] Đã chọn tổng cộng 2 đoạn highlight
+[2025-03-07 14:18:44] Đang xuất các đoạn highlight...
+[2025-03-07 14:18:44] Lỗi khi xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3: Encoding failed. ffmpeg/avlib returned error code: 8
+
+Command:['ffmpeg', '-y', '-f', 'wav', '-i', '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpqbvdyys_', '-acodec', 'alaw', '-b:a', '64k', '-f', 'wav', '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmputd3jo46']
+
+Output from ffmpeg/avlib:
+
+ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.4)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/7.1_4 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[aist#0:0/pcm_s16le @ 0x13e006900] Guessed Channel Layout: mono
+Input #0, wav, from '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpqbvdyys_':
+  Duration: 00:00:50.00, bitrate: 128 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 8000 Hz, mono, s16, 128 kb/s
+[aost#0:0 @ 0x13e00a0f0] Unknown encoder 'alaw'
+[aost#0:0 @ 0x13e00a0f0] Error selecting an encoder
+Error opening output file /var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmputd3jo46.
+Error opening output files: Encoder not found
+
+[2025-03-07 14:20:43] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 2
+[2025-03-07 14:20:43] Đang tải file âm thanh...
+[2025-03-07 14:20:44] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 14:20:44] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 14:20:45] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 14:20:45] Đã tính toán Spectral Centroid
+[2025-03-07 14:20:46] Đã tính toán Spectral Contrast
+[2025-03-07 14:20:47] Đã tính toán Onset Strength
+[2025-03-07 14:20:47] Đã kết hợp các đặc trưng
+[2025-03-07 14:20:47] Thiết lập cửa sổ trượt: frame_length=2205000, hop_length=22050
+[2025-03-07 14:20:47] Đã nội suy đặc trưng kết hợp
+[2025-03-07 14:20:47] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 14:20:47] Đã tính toán điểm số cho 362 đoạn
+[2025-03-07 14:20:47] Đang phân tích cấu trúc bài hát...
+[2025-03-07 14:20:48] Đang tính ma trận tự tương quan...
+[2025-03-07 14:21:16] Đang phân đoạn bài hát...
+[2025-03-07 14:21:27] Đã phân đoạn bài hát thành 22 đoạn
+[2025-03-07 14:21:27] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 14:21:27] Đang chọn các đoạn highlight...
+[2025-03-07 14:21:27] Đã chọn đoạn highlight tại 100.50s với điểm số 0.2276
+[2025-03-07 14:21:28] Đã chọn đoạn highlight tại 0.50s với điểm số 0.0479
+[2025-03-07 14:21:28] Đã chọn tổng cộng 2 đoạn highlight
+[2025-03-07 14:21:28] Đang xuất các đoạn highlight...
+[2025-03-07 14:21:28] Lỗi khi xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3: Encoding failed. ffmpeg/avlib returned error code: 8
+
+Command:['ffmpeg', '-y', '-f', 'wav', '-i', '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpg6e4t5qt', '-acodec', 'alaw', '-b:a', '64k', '-f', 'wav', '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpv9t1m014']
+
+Output from ffmpeg/avlib:
+
+ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.4)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/7.1_4 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[aist#0:0/pcm_s16le @ 0x15770a5f0] Guessed Channel Layout: mono
+Input #0, wav, from '/var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpg6e4t5qt':
+  Duration: 00:00:50.00, bitrate: 128 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 8000 Hz, mono, s16, 128 kb/s
+[aost#0:0 @ 0x15770ad50] Unknown encoder 'alaw'
+[aost#0:0 @ 0x15770ad50] Error selecting an encoder
+Error opening output file /var/folders/j_/k0t2j6vd4z523cp9yw_ntt5r0000gn/T/tmpv9t1m014.
+Error opening output files: Encoder not found
+
+[2025-03-07 14:24:16] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 3
+[2025-03-07 14:24:16] Đang tải file âm thanh...
+[2025-03-07 14:24:18] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 14:24:18] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 14:24:18] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 14:24:19] Đã tính toán Spectral Centroid
+[2025-03-07 14:24:20] Đã tính toán Spectral Contrast
+[2025-03-07 14:24:20] Đã tính toán Onset Strength
+[2025-03-07 14:24:20] Đã kết hợp các đặc trưng
+[2025-03-07 14:24:20] Thiết lập cửa sổ trượt: frame_length=2205000, hop_length=22050
+[2025-03-07 14:24:21] Đã nội suy đặc trưng kết hợp
+[2025-03-07 14:24:21] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 14:24:21] Đã tính toán điểm số cho 362 đoạn
+[2025-03-07 14:24:21] Đang phân tích cấu trúc bài hát...
+[2025-03-07 14:24:22] Đang tính ma trận tự tương quan...
+[2025-03-07 14:24:47] Đang phân đoạn bài hát...
+[2025-03-07 14:24:57] Đã phân đoạn bài hát thành 22 đoạn
+[2025-03-07 14:24:57] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 14:24:57] Đang chọn các đoạn highlight...
+[2025-03-07 14:24:57] Đã chọn đoạn highlight tại 100.50s với điểm số 0.2276
+[2025-03-07 14:24:58] Đã chọn đoạn highlight tại 0.50s với điểm số 0.0479
+[2025-03-07 14:24:58] Đã chọn tổng cộng 2 đoạn highlight
+[2025-03-07 14:24:58] Đang xuất các đoạn highlight...
+[2025-03-07 14:24:58] Đã xuất highlight 1 tại 0.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video 1.mp3
+[2025-03-07 14:24:59] Đã xuất highlight 2 tại 100.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video 2.mp3
+[2025-03-07 14:24:59] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 3
+[2025-03-07 14:27:03] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 4
+[2025-03-07 14:27:03] Đang tải file âm thanh...
+[2025-03-07 14:27:04] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 14:27:04] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 14:27:05] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 14:27:05] Đã tính toán Spectral Centroid
+[2025-03-07 14:27:06] Đã tính toán Spectral Contrast
+[2025-03-07 14:27:06] Đã tính toán Onset Strength
+[2025-03-07 14:27:06] Đã kết hợp các đặc trưng
+[2025-03-07 14:27:06] Thiết lập cửa sổ trượt: frame_length=2205000, hop_length=22050
+[2025-03-07 14:27:06] Đã nội suy đặc trưng kết hợp
+[2025-03-07 14:27:06] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 14:27:07] Đã tính toán điểm số cho 362 đoạn
+[2025-03-07 14:27:07] Đang phân tích cấu trúc bài hát...
+[2025-03-07 14:27:08] Đang tính ma trận tự tương quan...
+[2025-03-07 14:27:32] Đang phân đoạn bài hát...
+[2025-03-07 14:27:45] Đã phân đoạn bài hát thành 22 đoạn
+[2025-03-07 14:27:45] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 14:27:45] Đang chọn các đoạn highlight...
+[2025-03-07 14:27:45] Đã chọn đoạn highlight tại 100.50s với điểm số 0.2276
+[2025-03-07 14:27:45] Đã chọn đoạn highlight tại 0.50s với điểm số 0.0479
+[2025-03-07 14:27:45] Đã chọn tổng cộng 2 đoạn highlight
+[2025-03-07 14:27:45] Đang xuất các đoạn highlight...
+[2025-03-07 14:27:45] Đã chuyển đổi tên file có dấu 'LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video' thành 'LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video'
+[2025-03-07 14:27:46] Đã xuất highlight 1 tại 0.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video 1.mp3
+[2025-03-07 14:27:46] Đã xuất highlight 2 tại 100.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video 2.mp3
+[2025-03-07 14:27:46] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 4
+[2025-03-07 14:31:08] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 5
+[2025-03-07 14:31:08] Đang tải file âm thanh...
+[2025-03-07 14:31:10] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 14:31:10] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 14:31:11] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 14:31:11] Đã tính toán Spectral Centroid
+[2025-03-07 14:31:12] Đã tính toán Spectral Contrast
+[2025-03-07 14:31:13] Đã tính toán Onset Strength
+[2025-03-07 14:31:19] Lỗi khi xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3: unsupported format string passed to numpy.ndarray.__format__
+[2025-03-07 14:32:04] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 6
+[2025-03-07 14:32:04] Đang tải file âm thanh...
+[2025-03-07 14:32:05] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 14:32:05] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 14:32:05] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 14:32:06] Đã tính toán Spectral Centroid
+[2025-03-07 14:32:07] Đã tính toán Spectral Contrast
+[2025-03-07 14:32:07] Đã tính toán Onset Strength
+[2025-03-07 14:32:10] Lỗi khi xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3: unsupported format string passed to numpy.ndarray.__format__
+[2025-03-07 14:33:45] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 7
+[2025-03-07 14:33:45] Đang tải file âm thanh...
+[2025-03-07 14:33:46] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 14:33:46] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 14:33:46] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 14:33:47] Đã tính toán Spectral Centroid
+[2025-03-07 14:33:48] Đã tính toán Spectral Contrast
+[2025-03-07 14:33:48] Đã tính toán Onset Strength
+[2025-03-07 14:33:51] Lỗi khi xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3: unsupported format string passed to numpy.ndarray.__format__
+[2025-03-07 14:35:07] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 8
+[2025-03-07 14:35:07] Đang tải file âm thanh...
+[2025-03-07 14:35:09] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 14:35:09] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 14:35:09] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 14:35:10] Đã tính toán Spectral Centroid
+[2025-03-07 14:35:10] Đã tính toán Spectral Contrast
+[2025-03-07 14:35:11] Đã tính toán Onset Strength
+[2025-03-07 14:35:14] Lỗi khi xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3: unsupported format string passed to numpy.ndarray.__format__
+[2025-03-07 14:36:30] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 9
+[2025-03-07 14:36:30] Đang tải file âm thanh...
+[2025-03-07 14:36:31] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 14:36:31] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 14:36:32] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 14:36:32] Đã tính toán Spectral Centroid
+[2025-03-07 14:36:33] Đã tính toán Spectral Contrast
+[2025-03-07 14:36:34] Đã tính toán Onset Strength
+[2025-03-07 14:36:36] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-07 14:37:00] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 14:37:01] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 14:37:01] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 14:37:01] Thiết lập cửa sổ trượt: frame_length=2205000, hop_length=22050
+[2025-03-07 14:37:01] Đã nội suy đặc trưng kết hợp
+[2025-03-07 14:37:01] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 14:37:01] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 14:37:03] Đang tính ma trận tự tương quan...
+[2025-03-07 14:37:50] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 14:37:52] Đã tính toán điểm số cho 362 đoạn
+[2025-03-07 14:37:52] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 14:37:52] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 14:37:52] Đã phát hiện 1524 cao trào tiềm năng
+[2025-03-07 14:37:52] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 14:37:52] Không tìm thấy cao trào nào, sử dụng phương pháp điểm số tổng hợp...
+[2025-03-07 14:37:52] Đã chọn đoạn highlight tại 113.50s với điểm số 0.2294
+[2025-03-07 14:37:52] Không tìm đủ 2 đoạn từ cao trào, đang sử dụng phương pháp điểm số tổng hợp...
+[2025-03-07 14:37:52] Đã chọn đoạn highlight bổ sung tại 43.00s với điểm số 0.2058
+[2025-03-07 14:37:52] Đã chọn tổng cộng 2 đoạn highlight
+[2025-03-07 14:37:52] Đang xuất các đoạn highlight...
+[2025-03-07 14:37:52] Đã chuyển đổi tên file có dấu 'LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video' thành 'LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video'
+[2025-03-07 14:37:53] Đã xuất highlight 1 tại 43.00s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video 1.mp3
+[2025-03-07 14:37:53] Đã xuất highlight 2 tại 113.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video 2.mp3
+[2025-03-07 14:37:53] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 9
+[2025-03-07 14:49:36] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 10
+[2025-03-07 14:49:36] Đang tải file âm thanh...
+[2025-03-07 14:49:37] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 14:49:37] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 14:49:38] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 14:49:38] Đã tính toán Spectral Centroid
+[2025-03-07 14:49:39] Đã tính toán Spectral Contrast
+[2025-03-07 14:49:39] Đã tính toán Onset Strength
+[2025-03-07 14:49:43] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-07 14:50:09] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 14:50:09] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 14:50:09] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 14:50:09] Thiết lập cửa sổ trượt: frame_length=2205000, hop_length=22050
+[2025-03-07 14:50:09] Đã nội suy đặc trưng kết hợp
+[2025-03-07 14:50:09] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 14:50:09] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 14:50:11] Đang tính ma trận tự tương quan...
+[2025-03-07 14:50:52] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 14:50:53] Đã tính toán điểm số cho 362 đoạn
+[2025-03-07 14:50:53] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 14:50:53] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 14:50:54] Đã phát hiện 1524 cao trào tiềm năng
+[2025-03-07 14:50:54] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 14:50:54] Không tìm thấy cao trào nào, sử dụng phương pháp điểm số tổng hợp...
+[2025-03-07 14:50:54] Đã chọn đoạn highlight tại 113.50s với điểm số 0.2294
+[2025-03-07 14:50:54] Không tìm đủ 2 đoạn từ cao trào, đang sử dụng phương pháp điểm số tổng hợp...
+[2025-03-07 14:50:54] Đã chọn đoạn highlight bổ sung tại 43.00s với điểm số 0.2058
+[2025-03-07 14:50:54] Đã chọn tổng cộng 2 đoạn highlight
+[2025-03-07 14:50:54] Đang xuất các đoạn highlight...
+[2025-03-07 14:50:54] Đã chuyển đổi tên file có dấu 'LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video' thành 'LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video'
+[2025-03-07 14:50:54] Đã xuất highlight 1 tại 43.00s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video 1.mp3
+[2025-03-07 14:50:55] Đã xuất highlight 2 tại 113.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video 2.mp3
+[2025-03-07 14:50:55] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 10
+[2025-03-07 14:52:50] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 11
+[2025-03-07 14:52:50] Đang tải file âm thanh...
+[2025-03-07 14:52:51] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 14:52:51] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 14:52:52] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 14:52:52] Đã tính toán Spectral Centroid
+[2025-03-07 14:52:53] Đã tính toán Spectral Contrast
+[2025-03-07 14:52:53] Đã tính toán Onset Strength
+[2025-03-07 14:52:56] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-07 14:53:19] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 14:53:19] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 14:53:19] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 14:53:19] Thiết lập cửa sổ trượt: frame_length=2205000, hop_length=22050
+[2025-03-07 14:53:20] Đã nội suy đặc trưng kết hợp
+[2025-03-07 14:53:20] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 14:53:20] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 14:53:21] Đang tính ma trận tự tương quan...
+[2025-03-07 14:54:19] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 14:54:21] Đã tính toán điểm số cho 362 đoạn
+[2025-03-07 14:54:21] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 14:54:21] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 14:54:21] Đã phát hiện 1524 cao trào tiềm năng
+[2025-03-07 14:54:21] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 14:54:21] Không tìm thấy cao trào nào, sử dụng phương pháp điểm số tổng hợp...
+[2025-03-07 14:54:21] Đã chọn đoạn highlight tại 113.50s với điểm số 0.2294
+[2025-03-07 14:54:21] Không tìm đủ 2 đoạn từ cao trào, đang sử dụng phương pháp điểm số tổng hợp...
+[2025-03-07 14:54:21] Đã chọn đoạn highlight bổ sung tại 43.00s với điểm số 0.2058
+[2025-03-07 14:54:21] Đã chọn tổng cộng 2 đoạn highlight
+[2025-03-07 14:54:21] Đang xuất các đoạn highlight...
+[2025-03-07 14:54:21] Đã chuyển đổi tên file có dấu 'LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video' thành 'LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video'
+[2025-03-07 14:54:22] Đã xuất highlight 1 tại 43.00s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video 1.mp3
+[2025-03-07 14:54:22] Đã xuất highlight 2 tại 113.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video 2.mp3
+[2025-03-07 14:54:22] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 11
+[2025-03-07 14:54:34] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 12
+[2025-03-07 14:54:34] Đang tải file âm thanh...
+[2025-03-07 14:54:35] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 14:54:35] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 14:54:35] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 14:54:35] Đã tính toán Spectral Centroid
+[2025-03-07 14:54:36] Đã tính toán Spectral Contrast
+[2025-03-07 14:54:36] Đã tính toán Onset Strength
+[2025-03-07 14:54:39] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-07 14:54:59] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 14:54:59] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 14:54:59] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 14:54:59] Thiết lập cửa sổ trượt: frame_length=2205000, hop_length=22050
+[2025-03-07 14:54:59] Đã nội suy đặc trưng kết hợp
+[2025-03-07 14:54:59] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 14:54:59] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 14:55:00] Đang tính ma trận tự tương quan...
+[2025-03-07 14:55:43] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 14:55:45] Đã tính toán điểm số cho 362 đoạn
+[2025-03-07 14:55:45] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 14:55:45] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 14:55:45] Đã phát hiện 1524 cao trào tiềm năng
+[2025-03-07 14:55:45] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 14:55:45] Không tìm thấy cao trào nào, sử dụng phương pháp điểm số tổng hợp...
+[2025-03-07 14:55:45] Đã chọn đoạn highlight tại 113.50s với điểm số 0.2294
+[2025-03-07 14:55:45] Không tìm đủ 2 đoạn từ cao trào, đang sử dụng phương pháp điểm số tổng hợp...
+[2025-03-07 14:55:45] Đã chọn đoạn highlight bổ sung tại 43.00s với điểm số 0.2058
+[2025-03-07 14:55:45] Đã chọn tổng cộng 2 đoạn highlight
+[2025-03-07 14:55:45] Đang xuất các đoạn highlight...
+[2025-03-07 14:55:45] Đã chuyển đổi tên file có dấu 'LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video' thành 'LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video'
+[2025-03-07 14:55:45] Đã xuất highlight 1 tại 43.00s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video 1.mp3
+[2025-03-07 14:55:46] Đã xuất highlight 2 tại 113.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video 2.mp3
+[2025-03-07 14:55:46] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 12
+[2025-03-07 15:00:58] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 13
+[2025-03-07 15:00:58] Đang tải file âm thanh...
+[2025-03-07 15:00:59] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 15:00:59] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 15:00:59] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 15:01:00] Đã tính toán Spectral Centroid
+[2025-03-07 15:01:01] Đã tính toán Spectral Contrast
+[2025-03-07 15:01:01] Đã tính toán Onset Strength
+[2025-03-07 15:01:03] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-07 15:01:27] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 15:01:27] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 15:01:27] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 15:01:27] Thiết lập cửa sổ trượt: frame_length=1764000, hop_length=22050
+[2025-03-07 15:01:27] Đã nội suy đặc trưng kết hợp
+[2025-03-07 15:01:27] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 15:01:27] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 15:01:29] Đang tính ma trận tự tương quan...
+[2025-03-07 15:02:09] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 15:02:10] Đã tính toán điểm số cho 382 đoạn
+[2025-03-07 15:02:10] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 15:02:10] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 15:02:10] Đã phát hiện 1524 cao trào tiềm năng
+[2025-03-07 15:02:10] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 15:02:10] Không tìm thấy cao trào nào, sử dụng phương pháp điểm số tổng hợp...
+[2025-03-07 15:02:10] Đã chọn đoạn highlight tại 113.50s với điểm số 0.2360
+[2025-03-07 15:02:10] Không tìm đủ 2 đoạn từ cao trào, đang sử dụng phương pháp điểm số tổng hợp...
+[2025-03-07 15:02:10] Đã chọn đoạn highlight bổ sung tại 43.50s với điểm số 0.2106
+[2025-03-07 15:02:10] Đã chọn tổng cộng 2 đoạn highlight
+[2025-03-07 15:02:10] Đang xuất các đoạn highlight...
+[2025-03-07 15:02:10] Đã chuyển đổi tên file có dấu 'LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video' thành 'LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video'
+[2025-03-07 15:02:11] Đã xuất highlight 1 tại 43.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video 1.mp3
+[2025-03-07 15:02:12] Đã xuất highlight 2 tại 113.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video 2.mp3
+[2025-03-07 15:02:12] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 13
+[2025-03-07 15:06:03] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 14
+[2025-03-07 15:06:03] Đang tải file âm thanh...
+[2025-03-07 15:06:04] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 15:06:04] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 15:06:04] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 15:06:05] Đã tính toán Spectral Centroid
+[2025-03-07 15:06:06] Đã tính toán Spectral Contrast
+[2025-03-07 15:06:06] Đã tính toán Onset Strength
+[2025-03-07 15:06:08] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-07 15:06:31] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 15:06:31] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 15:06:31] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 15:06:31] Thiết lập cửa sổ trượt: frame_length=1764000, hop_length=22050
+[2025-03-07 15:06:31] Đã nội suy đặc trưng kết hợp
+[2025-03-07 15:06:31] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 15:06:31] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 15:06:33] Đang tính ma trận tự tương quan...
+[2025-03-07 15:07:22] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 15:07:24] Đã tính toán điểm số cho 382 đoạn
+[2025-03-07 15:07:24] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 15:07:24] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 15:07:24] Đã phát hiện 1524 cao trào tiềm năng
+[2025-03-07 15:07:24] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 15:07:24] Không tìm thấy cao trào nào, sử dụng phương pháp điểm số tổng hợp...
+[2025-03-07 15:07:24] Đã chọn đoạn highlight tại 113.50s với điểm số 0.2360
+[2025-03-07 15:07:24] Không tìm đủ 2 đoạn từ cao trào, đang sử dụng phương pháp điểm số tổng hợp...
+[2025-03-07 15:07:24] Đã chọn đoạn highlight bổ sung tại 43.50s với điểm số 0.2106
+[2025-03-07 15:07:24] Đã chọn tổng cộng 2 đoạn highlight
+[2025-03-07 15:07:24] Đang xuất các đoạn highlight...
+[2025-03-07 15:07:24] Đã chuyển đổi tên file có dấu 'LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video' thành 'LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video'
+[2025-03-07 15:07:25] Đã xuất highlight 1 tại 43.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video 1.mp3
+[2025-03-07 15:07:25] Đã xuất highlight 2 tại 113.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video 2.mp3
+[2025-03-07 15:07:25] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 14
+[2025-03-07 15:28:22] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 18
+[2025-03-07 15:28:22] Đang tải file âm thanh...
+[2025-03-07 15:28:22] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 15:28:22] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 15:28:22] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 15:28:23] Đã tính toán Spectral Centroid
+[2025-03-07 15:28:23] Đã tính toán Spectral Contrast
+[2025-03-07 15:28:24] Đã tính toán Onset Strength
+[2025-03-07 15:28:25] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-07 15:28:44] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 15:28:44] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 15:28:44] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 15:28:44] Thiết lập cửa sổ trượt: frame_length=1764000, hop_length=22050
+[2025-03-07 15:28:44] Đã nội suy đặc trưng kết hợp
+[2025-03-07 15:28:44] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 15:28:44] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 15:28:46] Đang tính ma trận tự tương quan...
+[2025-03-07 15:29:19] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 15:29:20] Đã tính toán điểm số cho 382 đoạn
+[2025-03-07 15:29:20] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 15:29:20] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 15:29:20] Đã phát hiện 1524 cao trào tiềm năng
+[2025-03-07 15:29:20] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 15:29:20] Đang tìm đoạn cao trào (main)...
+[2025-03-07 15:29:20] Không tìm thấy cao trào, sử dụng đoạn có điểm tổng hợp cao nhất cho main...
+[2025-03-07 15:29:20] Đã chọn đoạn main tại 113.50s với điểm số 0.2360
+[2025-03-07 15:29:20] Đang tìm 1 đoạn điệp khúc (chorus)...
+[2025-03-07 15:29:22] Đã chọn đoạn chorus (điệp khúc) tại 32.50s với điểm số 0.3114
+[2025-03-07 15:29:22] Đã chọn tổng cộng 2 đoạn highlight (main: 1, chorus: 1)
+[2025-03-07 15:29:22] Đang xuất các đoạn highlight...
+[2025-03-07 15:29:22] Đã chuyển đổi tên file có dấu 'LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video' thành 'LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video'
+[2025-03-07 15:29:22] Đã xuất highlight 1 tại 32.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video 1.mp3
+[2025-03-07 15:29:23] Đã xuất highlight 2 tại 113.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOA_NG_NGA_Y__E_P_TRO_I__E__NO_I_CHIA_TAY_Official_Music_Video 2.mp3
+[2025-03-07 15:29:23] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 18
+[2025-03-07 15:58:13] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 19
+[2025-03-07 15:58:13] Đang tải file âm thanh...
+[2025-03-07 15:58:14] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 15:58:14] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 15:58:15] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 15:58:15] Đã tính toán Spectral Centroid
+[2025-03-07 15:58:16] Đã tính toán Spectral Contrast
+[2025-03-07 15:58:16] Đã tính toán Onset Strength
+[2025-03-07 15:58:18] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-07 15:58:38] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 15:58:39] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 15:58:39] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 15:58:39] Thiết lập cửa sổ trượt: frame_length=1764000, hop_length=22050
+[2025-03-07 15:58:39] Đã nội suy đặc trưng kết hợp
+[2025-03-07 15:58:39] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 15:58:39] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 15:58:41] Đang tính ma trận tự tương quan...
+[2025-03-07 15:59:26] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 15:59:28] Đã tính toán điểm số cho 382 đoạn
+[2025-03-07 15:59:28] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 15:59:28] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 15:59:28] Đã phát hiện 1524 cao trào tiềm năng
+[2025-03-07 15:59:28] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 15:59:28] Đang tìm đoạn cao trào (main)...
+[2025-03-07 15:59:28] Không tìm thấy cao trào, sử dụng đoạn có điểm tổng hợp cao nhất cho main...
+[2025-03-07 15:59:28] Đã chọn đoạn main tại 113.50s với điểm số 0.2360
+[2025-03-07 15:59:28] Đang tìm 1 đoạn điệp khúc (chorus)...
+[2025-03-07 15:59:30] Đã chọn đoạn chorus (điệp khúc) tại 32.50s với điểm số 0.3114
+[2025-03-07 15:59:30] Đã chọn tổng cộng 2 đoạn highlight (main: 1, chorus: 1)
+[2025-03-07 15:59:30] Đang xuất các đoạn highlight...
+[2025-03-07 15:59:30] Đã chuyển đổi tên file có dấu 'LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video' thành 'LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video'
+[2025-03-07 15:59:30] Đã xuất highlight 1 tại 32.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video 1.mp3
+[2025-03-07 15:59:31] Đã xuất highlight 2 tại 113.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video 2.mp3
+[2025-03-07 15:59:31] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 19
+[2025-03-07 16:02:03] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 20
+[2025-03-07 16:02:03] Đang tải file âm thanh...
+[2025-03-07 16:02:03] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 16:02:03] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 16:02:03] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 16:02:04] Đã tính toán Spectral Centroid
+[2025-03-07 16:02:05] Đã tính toán Spectral Contrast
+[2025-03-07 16:02:05] Đã tính toán Onset Strength
+[2025-03-07 16:02:07] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-07 16:02:27] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 16:02:28] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 16:02:28] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 16:02:28] Thiết lập cửa sổ trượt: frame_length=1764000, hop_length=22050
+[2025-03-07 16:02:28] Đã nội suy đặc trưng kết hợp
+[2025-03-07 16:02:28] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 16:02:28] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 16:02:30] Đang tính ma trận tự tương quan...
+[2025-03-07 16:03:07] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 16:03:09] Đã tính toán điểm số cho 382 đoạn
+[2025-03-07 16:03:09] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 16:03:09] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 16:03:09] Đã phát hiện 1524 cao trào tiềm năng
+[2025-03-07 16:03:09] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 16:03:09] Đang tìm đoạn cao trào (main)...
+[2025-03-07 16:03:09] Không tìm thấy cao trào, sử dụng đoạn có điểm tổng hợp cao nhất cho main...
+[2025-03-07 16:03:09] Đã chọn đoạn main tại 113.50s với điểm số 0.2360
+[2025-03-07 16:03:09] Đang tìm 1 đoạn điệp khúc (chorus)...
+[2025-03-07 16:03:10] Đã chọn đoạn chorus (điệp khúc) tại 32.50s với điểm số 0.3114
+[2025-03-07 16:03:10] Đã chọn tổng cộng 2 đoạn highlight (main: 1, chorus: 1)
+[2025-03-07 16:03:10] Đang xuất các đoạn highlight...
+[2025-03-07 16:03:10] Đã chuyển đổi tên file có dấu 'LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video' thành 'LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video'
+[2025-03-07 16:03:11] Đã xuất highlight 1 tại 32.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video 1.mp3
+[2025-03-07 16:03:12] Đã xuất highlight 2 tại 113.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video 2.mp3
+[2025-03-07 16:03:12] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 20
+[2025-03-07 16:06:24] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 23
+[2025-03-07 16:06:24] Đang tải file âm thanh...
+[2025-03-07 16:06:25] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 16:06:25] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 16:06:25] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 16:06:26] Đã tính toán Spectral Centroid
+[2025-03-07 16:06:27] Đã tính toán Spectral Contrast
+[2025-03-07 16:06:27] Đã tính toán Onset Strength
+[2025-03-07 16:06:29] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-07 16:06:49] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 16:06:49] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 16:06:49] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 16:06:49] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-07 16:06:49] Đã nội suy đặc trưng kết hợp
+[2025-03-07 16:06:49] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 16:06:49] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 16:06:51] Đang tính ma trận tự tương quan...
+[2025-03-07 16:07:47] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 24
+[2025-03-07 16:07:47] Đang tải file âm thanh...
+[2025-03-07 16:07:48] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-07 16:07:48] Đang tính toán đặc trưng âm thanh...
+[2025-03-07 16:07:48] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-07 16:07:49] Đã tính toán Spectral Centroid
+[2025-03-07 16:07:50] Đã tính toán Spectral Contrast
+[2025-03-07 16:07:50] Đã tính toán Onset Strength
+[2025-03-07 16:07:54] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-07 16:08:15] Đã tính toán Harmonic-Percussive Separation
+[2025-03-07 16:08:15] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-07 16:08:15] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-07 16:08:15] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-07 16:08:15] Đã nội suy đặc trưng kết hợp
+[2025-03-07 16:08:15] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-07 16:08:15] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-07 16:08:17] Đang tính ma trận tự tương quan...
+[2025-03-07 16:08:56] Đã tính điểm số cho các đoạn điệp khúc tiềm năng
+[2025-03-07 16:08:59] Đã tính toán điểm số cho 372 đoạn
+[2025-03-07 16:08:59] Đã sắp xếp các đoạn theo điểm số
+[2025-03-07 16:08:59] Đang chọn các đoạn highlight bắt đầu từ cao trào...
+[2025-03-07 16:08:59] Đã phát hiện 1524 cao trào tiềm năng
+[2025-03-07 16:08:59] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-07 16:08:59] Đang tìm đoạn cao trào (main)...
+[2025-03-07 16:08:59] Không tìm thấy cao trào, sử dụng đoạn có điểm tổng hợp cao nhất cho main...
+[2025-03-07 16:08:59] Đã chọn đoạn main tại 113.50s với điểm số 0.2317
+[2025-03-07 16:08:59] Đang tìm 1 đoạn điệp khúc (chorus)...
+[2025-03-07 16:09:01] Đã chọn đoạn chorus (điệp khúc) tại 23.50s với điểm số 0.3010
+[2025-03-07 16:09:01] Đã chọn tổng cộng 2 đoạn highlight (main: 1, chorus: 1)
+[2025-03-07 16:09:01] Đang xuất các đoạn highlight...
+[2025-03-07 16:09:01] Đã chuyển đổi tên file có dấu 'LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video' thành 'LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video'
+[2025-03-07 16:09:02] Đã xuất highlight 1 tại 23.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video 1.mp3
+[2025-03-07 16:09:02] Đã xuất highlight 2 tại 113.50s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video 2.mp3
+[2025-03-07 16:09:02] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 24
+[2025-03-12 09:43:49.667] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 44
+[2025-03-12 09:43:49.670] Đang tải file âm thanh...
+[2025-03-12 09:43:49.954] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-12 09:43:49.954] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:43:50.242] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-12 09:43:50.726] Đã tính toán Spectral Centroid
+[2025-03-12 09:43:51.762] Đã tính toán Spectral Contrast
+[2025-03-12 09:43:52.069] Đã tính toán Onset Strength
+[2025-03-12 09:43:54.057] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-12 09:44:19.860] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:44:20.538] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:44:20.544] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:44:20.959] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-12 09:44:21.729] Đã tính toán Spectral Centroid
+[2025-03-12 09:44:23.314] Đã tính toán Spectral Contrast
+[2025-03-12 09:44:24.043] Đã tính toán Onset Strength
+[2025-03-12 09:44:27.867] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-12 09:44:53.929] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:44:54.249] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:44:54.251] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 09:44:54.253] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 09:44:54.378] Đã nội suy đặc trưng kết hợp
+[2025-03-12 09:44:54.379] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 09:44:54.379] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 09:45:24.277] Sẽ tạo 1 đoạn main và 1 đoạn chorus (tổng 2 đoạn)
+[2025-03-12 09:45:24.475] Đã nội suy chorus_scores từ 19891 lên 10183680
+[2025-03-12 09:45:26.849] Đã phát hiện 1524 cao trào tiềm năng
+[2025-03-12 09:45:26.850] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-12 09:45:31.144] Đã chọn đoạn main tại 112.06s với điểm số 0.2317
+[2025-03-12 09:45:31.145] Chưa đủ số chorus (0/1), tìm thêm từ danh sách scores
+[2025-03-12 09:45:31.152] Đã chọn tổng cộng 1 đoạn highlight: 1 main, 0 chorus
+[2025-03-12 09:45:31.152] Đang xuất các đoạn highlight...
+[2025-03-12 09:45:31.159] Đã chuyển đổi tên file có dấu 'LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video' thành 'LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video'
+[2025-03-12 09:45:32.014] Đã xuất highlight 1 tại 112.06s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video main 1.mp3
+[2025-03-12 09:45:32.018] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 44
+[2025-03-12 09:49:44.381] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 46
+[2025-03-12 09:49:44.382] Đang tải file âm thanh...
+[2025-03-12 09:49:44.677] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-12 09:49:44.677] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:49:44.945] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-12 09:49:45.515] Đã tính toán Spectral Centroid
+[2025-03-12 09:49:47.237] Đã tính toán Spectral Contrast
+[2025-03-12 09:49:47.711] Đã tính toán Onset Strength
+[2025-03-12 09:49:49.808] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-12 09:50:16.329] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:50:16.856] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:50:16.857] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:50:17.234] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-12 09:50:17.750] Đã tính toán Spectral Centroid
+[2025-03-12 09:50:18.884] Đã tính toán Spectral Contrast
+[2025-03-12 09:50:19.290] Đã tính toán Onset Strength
+[2025-03-12 09:50:22.680] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-12 09:50:48.245] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:50:48.551] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:50:48.552] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 09:50:48.552] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 09:50:48.673] Đã nội suy đặc trưng kết hợp
+[2025-03-12 09:50:48.674] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 09:50:48.674] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 09:51:24.006] Sẽ tạo 1 đoạn main và 2 đoạn chorus (tổng 3 đoạn)
+[2025-03-12 09:51:24.335] Đã nội suy chorus_scores từ 19891 lên 10183680
+[2025-03-12 09:51:27.795] Đã phát hiện 1524 cao trào tiềm năng
+[2025-03-12 09:51:27.801] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-12 09:51:34.999] Đã chọn đoạn main tại 112.56s với điểm số 0.2317
+[2025-03-12 09:51:35.004] Chưa đủ số chorus (0/2), tìm thêm từ danh sách scores
+[2025-03-12 09:51:40.238] Đã thêm đoạn chorus bổ sung tại 0.00s
+[2025-03-12 09:51:40.238] Đã chọn tổng cộng 2 đoạn highlight: 1 main, 1 chorus
+[2025-03-12 09:51:40.238] Đang xuất các đoạn highlight...
+[2025-03-12 09:51:40.251] Đã chuyển đổi tên file có dấu 'LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video' thành 'LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video'
+[2025-03-12 09:51:40.902] Xuất chorus từ 0.00s, độ dài 45.00s
+[2025-03-12 09:51:40.949] Sau khi chuyển đổi: độ dài = 45.00s
+[2025-03-12 09:51:41.078] Đã xuất highlight 1 (chorus) tại 0.00s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video chorus 1.mp3, độ dài cuối: 45.00s
+[2025-03-12 09:51:41.407] Xuất main từ 112.56s, độ dài 45.00s
+[2025-03-12 09:51:41.451] Sau khi chuyển đổi: độ dài = 45.00s
+[2025-03-12 09:51:41.558] Đã xuất highlight 2 (main) tại 112.56s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video main 2.mp3, độ dài cuối: 45.00s
+[2025-03-12 09:51:41.561] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 46
+[2025-03-12 09:58:22.340] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 48
+[2025-03-12 09:58:22.343] Đang tải file âm thanh...
+[2025-03-12 09:58:22.716] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-12 09:58:22.716] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:58:23.040] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-12 09:58:23.606] Đã tính toán Spectral Centroid
+[2025-03-12 09:58:24.567] Đã tính toán Spectral Contrast
+[2025-03-12 09:58:25.030] Đã tính toán Onset Strength
+[2025-03-12 09:58:27.144] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-12 09:58:53.888] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:58:55.443] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:58:55.443] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 09:58:56.026] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-12 09:58:56.690] Đã tính toán Spectral Centroid
+[2025-03-12 09:58:57.992] Đã tính toán Spectral Contrast
+[2025-03-12 09:58:58.800] Đã tính toán Onset Strength
+[2025-03-12 09:59:02.457] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-12 09:59:28.218] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 09:59:28.572] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 09:59:28.575] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 09:59:28.575] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 09:59:28.678] Đã nội suy đặc trưng kết hợp
+[2025-03-12 09:59:28.678] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 09:59:28.678] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 10:00:17.301] Sẽ tạo 1 đoạn main và 1 đoạn chorus (tổng 2 đoạn)
+[2025-03-12 10:00:18.009] Đã nội suy chorus_scores từ 19891 lên 10183680
+[2025-03-12 10:00:21.328] Đã phát hiện 1524 cao trào tiềm năng
+[2025-03-12 10:00:21.329] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-12 10:00:27.208] MAIN (thay thế): Đã chọn đoạn tại 112.56s với điểm số 0.2317
+[2025-03-12 10:00:27.213] Chưa đủ số chorus (0/1), tìm thêm từ danh sách scores
+[2025-03-12 10:00:33.823] Đã thêm đoạn chorus bổ sung tại 0.00s
+[2025-03-12 10:00:33.866] Đã chọn tổng cộng 2 đoạn highlight: 1 main, 1 chorus
+[2025-03-12 10:00:33.867] Đang xuất các đoạn highlight...
+[2025-03-12 10:00:33.873] Đã chuyển đổi tên file có dấu 'LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video' thành 'LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video'
+[2025-03-12 10:00:34.563] Xuất chorus từ 0.00s, độ dài 45.00s
+[2025-03-12 10:00:34.610] Sau khi chuyển đổi: độ dài = 45.00s
+[2025-03-12 10:00:34.719] Đã xuất highlight 1 (chorus) tại 0.00s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video chorus 1.mp3, độ dài cuối: 45.00s
+[2025-03-12 10:00:35.157] Xuất main từ 112.56s, độ dài 45.00s
+[2025-03-12 10:00:35.202] Sau khi chuyển đổi: độ dài = 45.00s
+[2025-03-12 10:00:35.307] Đã xuất highlight 2 (main) tại 112.56s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video main 2.mp3, độ dài cuối: 45.00s
+[2025-03-12 10:00:35.312] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 48
+[2025-03-12 10:04:14.127] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 49
+[2025-03-12 10:04:14.131] Đang tải file âm thanh...
+[2025-03-12 10:04:15.166] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-12 10:04:15.166] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 10:04:15.482] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-12 10:04:15.977] Đã tính toán Spectral Centroid
+[2025-03-12 10:04:17.237] Đã tính toán Spectral Contrast
+[2025-03-12 10:04:17.558] Đã tính toán Onset Strength
+[2025-03-12 10:04:21.219] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-12 10:04:43.775] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 10:04:44.111] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 10:04:44.111] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 10:04:44.469] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-12 10:04:44.870] Đã tính toán Spectral Centroid
+[2025-03-12 10:04:45.753] Đã tính toán Spectral Contrast
+[2025-03-12 10:04:46.024] Đã tính toán Onset Strength
+[2025-03-12 10:04:47.667] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-12 10:05:12.703] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 10:05:12.997] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 10:05:13.003] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 10:05:13.004] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 10:05:13.101] Đã nội suy đặc trưng kết hợp
+[2025-03-12 10:05:13.101] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 10:05:13.101] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 10:05:49.622] Sẽ tạo 1 đoạn main và 1 đoạn chorus (tổng 2 đoạn)
+[2025-03-12 10:05:49.995] Đã nội suy chorus_scores từ 19891 lên 10183680
+[2025-03-12 10:05:52.671] Đã phát hiện 1524 cao trào tiềm năng
+[2025-03-12 10:05:52.672] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-12 10:06:10.790] MAIN (thay thế): Đã chọn đoạn tại 119.72s với điểm số 0.2317
+[2025-03-12 10:06:10.790] Chưa đủ số chorus (0/1), tìm thêm từ danh sách scores
+[2025-03-12 10:06:21.371] Đã thêm đoạn chorus bổ sung tại 22.70s
+[2025-03-12 10:06:21.372] Đã chọn tổng cộng 2 đoạn highlight: 1 main, 1 chorus
+[2025-03-12 10:06:21.372] Đang xuất các đoạn highlight...
+[2025-03-12 10:06:21.372] Đã chuyển đổi tên file có dấu 'LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video' thành 'LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video'
+[2025-03-12 10:06:21.881] Xuất chorus từ 22.70s, độ dài 45.00s
+[2025-03-12 10:06:21.929] Sau khi chuyển đổi: độ dài = 45.00s
+[2025-03-12 10:06:22.042] Đã xuất highlight 1 (chorus) tại 22.70s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video chorus 1.mp3, độ dài cuối: 45.00s
+[2025-03-12 10:06:22.389] Xuất main từ 119.72s, độ dài 45.00s
+[2025-03-12 10:06:22.434] Sau khi chuyển đổi: độ dài = 45.00s
+[2025-03-12 10:06:22.557] Đã xuất highlight 2 (main) tại 119.72s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video main 2.mp3, độ dài cuối: 45.00s
+[2025-03-12 10:06:22.559] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 49
+[2025-03-12 15:51:36.773] Bắt đầu xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 52
+[2025-03-12 15:51:36.775] Đang tải file âm thanh...
+[2025-03-12 15:51:37.085] Đã tải file âm thanh: 230.92 giây, sample rate: 44100Hz
+[2025-03-12 15:51:37.085] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 15:51:37.324] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-12 15:51:37.704] Đã tính toán Spectral Centroid
+[2025-03-12 15:51:38.613] Đã tính toán Spectral Contrast
+[2025-03-12 15:51:38.869] Đã tính toán Onset Strength
+[2025-03-12 15:51:40.367] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-12 15:52:00.507] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 15:52:00.802] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 15:52:00.804] Đang tính toán đặc trưng âm thanh...
+[2025-03-12 15:52:01.163] Đã tính toán RMS: min=0.0000, max=0.6351, mean=0.2159
+[2025-03-12 15:52:01.592] Đã tính toán Spectral Centroid
+[2025-03-12 15:52:02.484] Đã tính toán Spectral Contrast
+[2025-03-12 15:52:02.739] Đã tính toán Onset Strength
+[2025-03-12 15:52:04.196] Đã tính toán Tempo (107.67 BPM) và Beat Strength
+[2025-03-12 15:52:23.592] Đã tính toán Harmonic-Percussive Separation
+[2025-03-12 15:52:23.864] Đã tính toán MFCC và độ biến thiên âm sắc
+[2025-03-12 15:52:23.865] Đã kết hợp và làm mịn các đặc trưng
+[2025-03-12 15:52:23.865] Thiết lập cửa sổ trượt: frame_length=1984500, hop_length=22050
+[2025-03-12 15:52:24.007] Đã nội suy đặc trưng kết hợp
+[2025-03-12 15:52:24.007] Đang tìm đoạn có đặc trưng cao nhất...
+[2025-03-12 15:52:24.007] Đang phân tích cấu trúc bài hát để phát hiện điệp khúc...
+[2025-03-12 15:52:46.477] Sẽ tạo 1 đoạn main và 1 đoạn chorus (tổng 2 đoạn)
+[2025-03-12 15:52:46.653] Đã nội suy chorus_scores từ 19891 lên 10183680
+[2025-03-12 15:52:48.483] Đã phát hiện 1524 cao trào tiềm năng
+[2025-03-12 15:52:48.483] Đã sắp xếp 0 cao trào theo độ mạnh
+[2025-03-12 15:52:58.109] MAIN (thay thế): Đã chọn đoạn tại 119.72s với điểm số 0.2317
+[2025-03-12 15:52:58.110] Chưa đủ số chorus (0/1), tìm thêm từ danh sách scores
+[2025-03-12 15:53:06.942] Đã thêm đoạn chorus bổ sung tại 22.70s
+[2025-03-12 15:53:06.942] Đã chọn tổng cộng 2 đoạn highlight: 1 main, 1 chorus
+[2025-03-12 15:53:06.942] Đang xuất các đoạn highlight...
+[2025-03-12 15:53:06.943] Đã chuyển đổi tên file có dấu 'LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video' thành 'LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video'
+[2025-03-12 15:53:07.346] Xuất chorus từ 22.70s, độ dài 45.00s
+[2025-03-12 15:53:07.393] Sau khi chuyển đổi: độ dài = 45.00s
+[2025-03-12 15:53:07.552] Đã xuất highlight 1 (chorus) tại 22.70s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video chorus 1.mp3, độ dài cuối: 45.00s
+[2025-03-12 15:53:07.917] Xuất main từ 119.72s, độ dài 45.00s
+[2025-03-12 15:53:07.962] Sau khi chuyển đổi: độ dài = 45.00s
+[2025-03-12 15:53:08.081] Đã xuất highlight 2 (main) tại 119.72s vào file /Users/accompany/Documents/chunmani-assistant/audio/output/LOU_HOANG_NGAY_ĐEP_TROI_ĐE_NOI_CHIA_TAY_Official_Music_Video main 2.mp3, độ dài cuối: 45.00s
+[2025-03-12 15:53:08.083] Hoàn thành xử lý file LOU_HOÀNG_NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_Official_Music_Video.mp3 - Job ID: 52
