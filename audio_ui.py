@@ -20,47 +20,27 @@ if page == "Xử lý Audio":
 
     uploaded_files = st.file_uploader("Upload your audio files", type=["mp3", "wav", "flac", "m4a", "aac", "ogg", "wma", "aiff"], accept_multiple_files=True)
     
-    # Display waveform visualization for uploaded files
+    # Display uploaded files without waveform visualization
     if uploaded_files:
         # Hiển thị số lượng file đã upload
         st.info(f"Đã tải lên {len(uploaded_files)} file audio")
         
-        # Create tabs for each uploaded file to show waveforms
+        # Create tabs for each uploaded file
         preview_tabs = st.tabs([f"Preview: {file.name}" for file in uploaded_files])
         
         for i, uploaded_file in enumerate(uploaded_files):
             with preview_tabs[i]:
                 try:
-                    # Read audio data for visualization
+                    # Read audio data for player only
                     audio_bytes = uploaded_file.getvalue()
-                    audio_data = io.BytesIO(audio_bytes)
-                    
-                    # Load audio with librosa
-                    y, sr = librosa.load(audio_data, sr=None)
-                    
-                    # Create waveform visualization
-                    fig, ax = plt.subplots(figsize=(12, 3))
-                    ax.plot(np.linspace(0, len(y)/sr, len(y)), y, color='#3366FF')
-                    ax.set_xlabel('Time (s)')
-                    ax.set_ylabel('Amplitude')
-                    ax.set_title(f'Waveform - {uploaded_file.name}')
-                    ax.grid(True, alpha=0.3)
-                    
-                    # Add time markers
-                    total_duration = len(y)/sr
-                    time_markers = np.linspace(0, total_duration, 10)
-                    ax.set_xticks(time_markers)
-                    ax.set_xticklabels([f"{t:.1f}" for t in time_markers])
-                    
-                    st.pyplot(fig)
                     
                     # Display audio player for the uploaded file
                     st.audio(audio_bytes, format=f"audio/{uploaded_file.type.split('/')[-1]}")
                     
-                    # Show audio information
-                    st.info(f"Duration: {total_duration:.2f} seconds | Sample rate: {sr} Hz")
+                    # Display file info (without duration that required librosa)
+                    st.info(f"File: {uploaded_file.name}")
                 except Exception as e:
-                    st.warning(f"Không thể hiển thị waveform cho file {uploaded_file.name}: {str(e)}")
+                    st.warning(f"Không thể hiển thị file {uploaded_file.name}: {str(e)}")
     
     # Adjusted segment_duration slider to match the 40-60 second requirement
     segment_duration = st.slider("Segment Duration (seconds)", min_value=40.0, max_value=60.0, value=45.0, step=5.0)
@@ -131,25 +111,10 @@ if page == "Xử lý Audio":
                                     highlight_file = highlight['highlight_file']
                                     audio_response = requests.get(f"http://127.0.0.1:8000/download_highlight?file_path={highlight_file}")
                                     
-                                    # Hiển thị audio tương tự như xử lý đơn lẻ
+                                    # Hiển thị audio (bỏ visualizer)
                                     if audio_response.status_code == 200:
-                                        # Tạo visualizer cho audio highlight
+                                        # Lấy audio bytes để phát
                                         audio_bytes = audio_response.content
-                                        try:
-                                            # Đọc audio data để tạo visualizer
-                                            audio_data = io.BytesIO(audio_bytes)
-                                            y, sr = librosa.load(audio_data, sr=None)
-                                            
-                                            # Tạo waveform visualization
-                                            fig, ax = plt.subplots(figsize=(10, 2))
-                                            ax.plot(np.linspace(0, len(y)/sr, len(y)), y, color='#1DB954')
-                                            ax.set_xlabel('Time (s)')
-                                            ax.set_ylabel('Amplitude')
-                                            ax.set_title(f'Waveform - Highlight at {highlight["highlight_time"]}s')
-                                            ax.grid(True, alpha=0.3)
-                                            st.pyplot(fig)
-                                        except Exception as e:
-                                            st.warning(f"Không thể tạo visualizer: {str(e)}")
                                         
                                         # Sử dụng định dạng MP3 cho audio player
                                         st.audio(audio_bytes, format="audio/mp3")
@@ -203,23 +168,8 @@ if page == "Xử lý Audio":
                                         highlight_file = highlight['highlight_file']
                                         audio_response = requests.get(f"http://127.0.0.1:8000/download_highlight?file_path={highlight_file}")
                                         if audio_response.status_code == 200:
-                                            # Tạo visualizer cho audio highlight
+                                            # Phát audio (bỏ visualizer)
                                             audio_bytes = audio_response.content
-                                            try:
-                                                # Đọc audio data để tạo visualizer
-                                                audio_data = io.BytesIO(audio_bytes)
-                                                y, sr = librosa.load(audio_data, sr=None)
-                                                
-                                                # Tạo waveform visualization
-                                                fig, ax = plt.subplots(figsize=(10, 2))
-                                                ax.plot(np.linspace(0, len(y)/sr, len(y)), y, color='#1DB954')
-                                                ax.set_xlabel('Time (s)')
-                                                ax.set_ylabel('Amplitude')
-                                                ax.set_title(f'Waveform - Highlight at {highlight["highlight_time"]}s')
-                                                ax.grid(True, alpha=0.3)
-                                                st.pyplot(fig)
-                                            except Exception as e:
-                                                st.warning(f"Không thể tạo visualizer: {str(e)}")
                                             
                                             # Sử dụng định dạng MP3 cho audio player
                                             st.audio(audio_bytes, format="audio/mp3")
@@ -315,28 +265,10 @@ elif page == "Lịch sử xử lý":
                                     type_label = f" ({segment_type.upper()})" if segment_type else ""
                                     st.write(f"**Highlight {highlight['highlight_index']}** - Thời điểm: {highlight['highlight_time']} giây")
                                     
-                                    # Hiển thị audio
+                                    # Hiển thị audio (bỏ visualizer)
                                     audio_response = requests.get(f"http://127.0.0.1:8000/download_highlight?file_path={highlight['highlight_file']}")
                                     if audio_response.status_code == 200:
-                                        # Tạo visualizer cho audio highlight
-                                        audio_bytes = audio_response.content
-                                        try:
-                                            # Đọc audio data để tạo visualizer
-                                            audio_data = io.BytesIO(audio_bytes)
-                                            y, sr = librosa.load(audio_data, sr=None)
-                                            
-                                            # Tạo waveform visualization
-                                            fig, ax = plt.subplots(figsize=(10, 2))
-                                            ax.plot(np.linspace(0, len(y)/sr, len(y)), y, color='#1DB954')
-                                            ax.set_xlabel('Time (s)')
-                                            ax.set_ylabel('Amplitude')
-                                            ax.set_title(f'Waveform - Highlight at {highlight["highlight_time"]}s')
-                                            ax.grid(True, alpha=0.3)
-                                            st.pyplot(fig)
-                                        except Exception as e:
-                                            st.warning(f"Không thể tạo visualizer: {str(e)}")
-                                        
-                                        # Sử dụng định dạng MP3 cho audio player
+                                        # Phát audio
                                         st.audio(audio_response.content, format="audio/mp3")
                                     else:
                                         st.warning(f"Không thể tải file audio highlight {highlight['highlight_index']}")
