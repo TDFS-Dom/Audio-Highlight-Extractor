@@ -18,7 +18,7 @@ page = st.sidebar.radio("Chọn chức năng:", ["Xử lý Audio", "Lịch sử 
 if page == "Xử lý Audio":
     st.title("Audio Highlight Extractor")
 
-    uploaded_files = st.file_uploader("Upload your audio files", type=["mp3", "wav", "flac", "m4a", "aac", "ogg", "wma", "aiff"],, accept_multiple_files=True)
+    uploaded_files = st.file_uploader("Upload your audio files", type=["mp3", "wav", "flac", "m4a", "aac", "ogg", "wma", "aiff"], accept_multiple_files=True)
     
     # Display waveform visualization for uploaded files
     if uploaded_files:

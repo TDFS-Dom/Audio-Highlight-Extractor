@@ -20,14 +20,16 @@ from utils_sql import (
 import logging
 import whisper
 import torch
-
-# Thiết lập logging
+import sys
+os.environ["PYTHONIOENCODING"] = "utf-8"
+# Force UTF-8 encoding for the stdout stream
+sys.stdout.reconfigure(encoding='utf-8')
+# Configure logging to use UTF-8
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("audio_processing.log"),
-        logging.StreamHandler()
+        logging.StreamHandler(stream=sys.stdout)
     ]
 )
 logger = logging.getLogger("audio_processor")

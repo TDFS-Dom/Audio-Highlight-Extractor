@@ -22,7 +22,8 @@ from utils_sql import (
     get_processing_jobs, get_job_highlights, get_job_details
 )
 from schema import init_db
-
+import sys
+os.environ["PYTHONIOENCODING"] = "utf-8"
 # Cấu hình API với metadata cho documentation
 app = FastAPI(
     title="Audio Highlight API",
@@ -33,13 +34,14 @@ app = FastAPI(
     openapi_url="/api/openapi.json",
 )
 
-# Thiết lập logging
+# Force UTF-8 encoding for the stdout stream
+sys.stdout.reconfigure(encoding='utf-8')
+# Configure logging to use UTF-8
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("audio_processing.log"),
-        logging.StreamHandler()
+        logging.StreamHandler(stream=sys.stdout)
     ]
 )
 logger = logging.getLogger("audio_processor")
