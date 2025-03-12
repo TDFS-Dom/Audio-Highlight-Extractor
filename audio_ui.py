@@ -109,17 +109,24 @@ if page == "Xử lý Audio":
                                     
                                     # Đọc file highlight từ backend để hiển thị
                                     highlight_file = highlight['highlight_file']
-                                    audio_response = requests.get(f"http://127.0.0.1:8000/download_highlight?file_path={highlight_file}")
-                                    
-                                    # Hiển thị audio (bỏ visualizer)
-                                    if audio_response.status_code == 200:
-                                        # Lấy audio bytes để phát
-                                        audio_bytes = audio_response.content
-                                        
-                                        # Sử dụng định dạng MP3 cho audio player
-                                        st.audio(audio_bytes, format="audio/mp3")
-                                    else:
-                                        st.error(f"Could not retrieve highlight audio file {j+1}.")
+                                    try:
+                                        if isinstance(highlight_file, dict) and "path" in highlight_file:
+                                            path_to_use = highlight_file["path"]
+                                        elif isinstance(highlight_file, dict) and "file_path" in highlight_file:
+                                            path_to_use = highlight_file["file_path"]  
+                                        else:
+                                            path_to_use = highlight_file
+
+                                        audio_response = requests.get(f"http://127.0.0.1:8000/download_highlight?file_path={path_to_use}")
+                                        if audio_response.status_code == 200:
+                                            # Phát audio
+                                            st.audio(audio_response.content, format="audio/mp3")
+                                        else:
+                                            st.warning(f"Không thể tải file audio highlight. Lỗi: {audio_response.status_code}")
+                                            # Hiển thị thông tin highlight mà không phát audio
+                                            st.info(f"Thông tin highlight: {path_to_use}")
+                                    except Exception as e:
+                                        st.error(f"Lỗi khi tải highlight: {str(e)}")
                     else:
                         st.error(f"Error processing audio batch: {response.text}")
             
@@ -166,15 +173,24 @@ if page == "Xử lý Audio":
                                         
                                         # Đọc file highlight từ backend để hiển thị
                                         highlight_file = highlight['highlight_file']
-                                        audio_response = requests.get(f"http://127.0.0.1:8000/download_highlight?file_path={highlight_file}")
-                                        if audio_response.status_code == 200:
-                                            # Phát audio (bỏ visualizer)
-                                            audio_bytes = audio_response.content
-                                            
-                                            # Sử dụng định dạng MP3 cho audio player
-                                            st.audio(audio_bytes, format="audio/mp3")
-                                        else:
-                                            st.error(f"Could not retrieve highlight audio file {j+1}.")
+                                        try:
+                                            if isinstance(highlight_file, dict) and "path" in highlight_file:
+                                                path_to_use = highlight_file["path"]
+                                            elif isinstance(highlight_file, dict) and "file_path" in highlight_file:
+                                                path_to_use = highlight_file["file_path"]  
+                                            else:
+                                                path_to_use = highlight_file
+
+                                            audio_response = requests.get(f"http://127.0.0.1:8000/download_highlight?file_path={path_to_use}")
+                                            if audio_response.status_code == 200:
+                                                # Phát audio
+                                                st.audio(audio_response.content, format="audio/mp3")
+                                            else:
+                                                st.warning(f"Không thể tải file audio highlight. Lỗi: {audio_response.status_code}")
+                                                # Hiển thị thông tin highlight mà không phát audio
+                                                st.info(f"Thông tin highlight: {path_to_use}")
+                                        except Exception as e:
+                                            st.error(f"Lỗi khi tải highlight: {str(e)}")
                                 else:
                                     try:
                                         # Try to parse error message as JSON
@@ -266,12 +282,25 @@ elif page == "Lịch sử xử lý":
                                     st.write(f"**Highlight {highlight['highlight_index']}** - Thời điểm: {highlight['highlight_time']} giây")
                                     
                                     # Hiển thị audio (bỏ visualizer)
-                                    audio_response = requests.get(f"http://127.0.0.1:8000/download_highlight?file_path={highlight['highlight_file']}")
-                                    if audio_response.status_code == 200:
-                                        # Phát audio
-                                        st.audio(audio_response.content, format="audio/mp3")
-                                    else:
-                                        st.warning(f"Không thể tải file audio highlight {highlight['highlight_index']}")
+                                    highlight_file = highlight['highlight_file']
+                                    try:
+                                        if isinstance(highlight_file, dict) and "path" in highlight_file:
+                                            path_to_use = highlight_file["path"]
+                                        elif isinstance(highlight_file, dict) and "file_path" in highlight_file:
+                                            path_to_use = highlight_file["file_path"]  
+                                        else:
+                                            path_to_use = highlight_file
+
+                                        audio_response = requests.get(f"http://127.0.0.1:8000/download_highlight?file_path={path_to_use}")
+                                        if audio_response.status_code == 200:
+                                            # Phát audio
+                                            st.audio(audio_response.content, format="audio/mp3")
+                                        else:
+                                            st.warning(f"Không thể tải file audio highlight. Lỗi: {audio_response.status_code}")
+                                            # Hiển thị thông tin highlight mà không phát audio
+                                            st.info(f"Thông tin highlight: {path_to_use}")
+                                    except Exception as e:
+                                        st.error(f"Lỗi khi tải highlight: {str(e)}")
                             elif job_detail['status'] == "PROCESSING":
                                 st.info("Đang xử lý...")
                             elif job_detail['status'] == "FAILED":

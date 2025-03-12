@@ -126,31 +126,12 @@ async def get_multiple_highlights(
     response_class=FileResponse,
     response_description="File audio highlight")
 async def download_highlight(file_path: str):
-    if not os.path.exists(file_path):
-        return {"error": "File không tồn tại"}
+    # Nếu file_path là dictionary đã được parse từ JSON
+    if isinstance(file_path, dict):
+        file_path = file_path.get("path", "") or file_path.get("file_path", "")
     
-    # Lấy tên file từ đường dẫn
-    filename = os.path.basename(file_path)
-    
-    # Xác định media_type dựa trên phần mở rộng của file
-    if filename.endswith('.mp3'):
-        media_type = "audio/mpeg"
-    elif filename.endswith('.wav'):
-        media_type = "audio/wav"
-    else:
-        media_type = "audio/mpeg"  # Mặc định là MP3
-    
-    # Xử lý tên file để tránh lỗi Unicode khi encode sang latin-1
-    # Thay thế các ký tự Unicode không hợp lệ bằng ASCII
-    filename_ascii = unicodedata.normalize('NFKD', filename)
-    filename_ascii = re.sub(r'[^\x00-\x7F]+', '_', filename_ascii)
-    
-    return FileResponse(
-        path=file_path, 
-        media_type=media_type, 
-        filename=filename_ascii,
-        headers={"Content-Disposition": f"attachment; filename={filename_ascii}"}
-    )
+    # Tiếp tục xử lý file_path như bình thường
+    return FileResponse(file_path)
 
 # Endpoint để lấy danh sách các job đã xử lý
 @app.get("/jobs",

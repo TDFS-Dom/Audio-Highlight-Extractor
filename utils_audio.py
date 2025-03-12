@@ -302,10 +302,42 @@ async def process_audio_file(audio_file_path, output_dir, file_name, num_segment
     logger.info(f"Bắt đầu xử lý file {file_name} - Job ID: {job_id}")
     
     try:
-        # Tải file âm thanh
+        # Tạo thư mục đầu ra nếu chưa tồn tại
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Tải file âm thanh với xử lý lỗi tốt hơn
         write_log(file_name, "Đang tải file âm thanh...")
-        y, sr = librosa.load(audio_file_path, sr=None)
-        write_log(file_name, f"Đã tải file âm thanh: {len(y)/sr:.2f} giây, sample rate: {sr}Hz")
+        try:
+            # Thử sử dụng pydub trước để kiểm tra file có hợp lệ không
+            test_segment = AudioSegment.from_file(audio_file_path)
+            write_log(file_name, f"File audio hợp lệ, độ dài: {len(test_segment)/1000:.2f} giây")
+            
+            # Sau đó mới sử dụng librosa để xử lý
+            y, sr = librosa.load(audio_file_path, sr=None)
+            write_log(file_name, f"Đã tải file âm thanh: {len(y)/sr:.2f} giây, sample rate: {sr}Hz")
+        except Exception as e:
+            write_log(file_name, f"Lỗi khi tải file âm thanh: {str(e)}")
+            # Thử chuyển đổi file sang định dạng WAV sạch và tải lại
+            write_log(file_name, "Đang thử chuyển đổi file sang WAV và tải lại...")
+            
+            with tempfile.NamedTemporaryFile(suffix='.wav', delete=False) as temp_file:
+                temp_wav = temp_file.name
+            
+            try:
+                # Chuyển đổi sang WAV
+                audio = AudioSegment.from_file(audio_file_path)
+                audio.export(temp_wav, format="wav")
+                
+                # Tải lại từ file WAV
+                y, sr = librosa.load(temp_wav, sr=None)
+                write_log(file_name, f"Đã tải thành công từ file WAV tạm: {len(y)/sr:.2f} giây, sample rate: {sr}Hz")
+                
+                # Xóa file tạm
+                os.unlink(temp_wav)
+            except Exception as e2:
+                if os.path.exists(temp_wav):
+                    os.unlink(temp_wav)
+                raise Exception(f"Không thể tải file âm thanh sau khi chuyển đổi: {str(e2)}")
         
         # Tính toán nhiều đặc trưng âm thanh - sử dụng hàm đã tách
         features = calculate_audio_features(y, sr, file_name)
@@ -661,14 +693,35 @@ async def process_audio_file(audio_file_path, output_dir, file_name, num_segment
         
         # Lấy tên file gốc không có phần mở rộng
         base_filename = os.path.splitext(os.path.basename(file_name))[0]
-        
+
+        # Thêm kiểm tra tính hợp lệ của tên file
+        if not base_filename or base_filename.endswith('_'):
+            # Nếu tên file không hợp lệ, tạo tên file mặc định
+            base_filename = "highlight_" + datetime.now().strftime("%Y%m%d_%H%M%S")
+            write_log(file_name, f"Tên file không hợp lệ, sử dụng tên mặc định: {base_filename}")
+
         # Xử lý tên file để bỏ dấu nhưng giữ nguyên ký tự
         if any(ord(c) > 127 for c in base_filename):
             base_filename_ascii = unicodedata.normalize('NFKD', base_filename)
             base_filename_ascii = ''.join([c for c in base_filename_ascii if not unicodedata.combining(c)])
             write_log(file_name, f"Đã chuyển đổi tên file có dấu '{base_filename}' thành '{base_filename_ascii}'")
             base_filename = base_filename_ascii
+
+        # Đảm bảo base_filename không chứa ký tự không hợp lệ đối với hệ thống file và URL
+        # Thay thế cả dấu & và các ký tự đặc biệt khác
+        base_filename = re.sub(r'[\\/*?:"<>|&]', '_', base_filename)
         
+        # Fix: Loại bỏ dấu gạch dưới ở cuối tên file
+        base_filename = base_filename.rstrip('_')
+        
+        # Fix: Đảm bảo tên file không trống sau khi xử lý
+        if not base_filename or len(base_filename.strip()) == 0:
+            base_filename = "highlight_" + datetime.now().strftime("%Y%m%d_%H%M%S")
+            write_log(file_name, f"Tên file không hợp lệ sau khi xử lý, sử dụng tên mặc định: {base_filename}")
+            
+        # Fix: Thêm bước ghi log để kiểm tra tên file sau khi xử lý
+        write_log(file_name, f"Tên file sau khi xử lý: '{base_filename}'")
+
         for idx, (start_sample, score, segment_type) in enumerate(top_segments):
             start_time_hl = start_sample / sr
             
@@ -693,8 +746,17 @@ async def process_audio_file(audio_file_path, output_dir, file_name, num_segment
             # THAY ĐỔI: Ghi log độ dài sau khi chuyển đổi
             write_log(file_name, f"Sau khi chuyển đổi: độ dài = {len(highlight_audio)/1000:.2f}s")
             
-            # Tạo tên file theo yêu cầu: tên file gốc + số thứ tự
-            highlight_output_path = os.path.join(output_dir, f"{base_filename} {segment_type} {idx+1}.mp3")
+            # Tạo tên file theo yêu cầu: tên file gốc + loại đoạn + số thứ tự
+            # Đảm bảo không có ký tự đặc biệt trong tên file
+            segment_filename = f"{base_filename}_{segment_type}_{idx+1}.mp3"
+            
+            # Fix: Ghi log để kiểm tra tên file đầy đủ
+            write_log(file_name, f"Tên file output: '{segment_filename}'")
+            
+            highlight_output_path = os.path.join(output_dir, segment_filename)
+            
+            # Fix: Kiểm tra tồn tại của thư mục đầu ra
+            os.makedirs(output_dir, exist_ok=True)
             
             # Xuất file MP3 với bitrate 64kbps
             highlight_audio.export(
